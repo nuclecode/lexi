@@ -1,5 +1,5 @@
 import localFont from "next/font/local";
-import "./globals.css";
+import "../styles/globals.scss";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -20,9 +20,29 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
-      </body>
+    <body className={`${geistSans.variable} ${geistMono.variable}`}>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/solutions">Solutions</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/terms">Terms</a></li>
+          <li><a href="/cookies">Cookies</a></li>
+        </ul>
+      </nav>
+    </header>
+    {children}
+    <footer>
+      <p>&copy; {new Date().getFullYear()} Lexi. All Rights Reserved.</p>
+      <p className="footer-engineered">
+        <a href="https://nuclecode.uk" target="_blank" rel="noopener noreferrer">
+        Engineered by nuclecode
+      </a></p>
+    </footer>
+    </body>
     </html>
   );
 }
