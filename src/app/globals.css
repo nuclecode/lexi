@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #F8E370; /* #FFF8DC; */
+  }
+  
+  a {
+    text-decoration: none;
+    color: #FFD700;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+    color: #EFA92F;
+  }
+  
