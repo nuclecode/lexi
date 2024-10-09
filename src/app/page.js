@@ -1,8 +1,12 @@
 import React from "react";
+import Hero from "./hero/Hero"
 
 const HomePage = () => {
   return (
-    <section style={sectionStyles}>
+    <>
+    <Hero />
+
+    <section style={sectionStyles}> 
       
         <h1 style={headingStyles}>Welcome to LEXI Construction Services</h1>
 
@@ -19,6 +23,7 @@ const HomePage = () => {
 
           <div style={greyStyle}>This is a grey color with dark grey letters</div>
     </section>  
+    </>
   );
 }
 
