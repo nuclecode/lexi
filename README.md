@@ -37,12 +37,19 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## Colour palette of LEXI
 
-# letter - light yellow - '#F8E370';
-# letter - dark yellow - '#EFA92F';
+# letter 
+- light yellow - '#F8E370';
+# letter
+ - dark yellow - '#EFA92F';
 
-# background - main color - light brown -  '#75563C';
-# background - dark brown - '#4C3C2E';
+# background - main color
+ - light brown -  '#75563C';
+# background
+ - dark brown - '#4C3C2E';
 
-# other - light grey - '#ADADAD';
-# othe - dark grey - '#848484';
-# background - white - '#FFFFFF';
+# other 
+- light grey - '#ADADAD';
+# other
+ - dark grey - '#848484';
+# background 
+- white - '#FFFFFF';
