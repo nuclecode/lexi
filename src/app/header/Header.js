@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import logo from '../../public/Business card-LEXI_02_for PRINT-02.jpg'; 
+import logo from '../../../public/Business card-LEXI_02_for PRINT-02.jpg'; 
 
 const Header = () => {
   return (
