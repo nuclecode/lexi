@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <div className={styles.hero}>
       <video autoPlay loop muted className={styles.hero__video}>
-        <source src="/hero__video.MP4" type="video/mp4" />
+        <source src="/hero__video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div className={styles.hero__overlay}></div>
