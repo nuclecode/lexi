@@ -5,6 +5,7 @@ import localFont from "next/font/local";
 import "../styles/globals.scss";
 
 import Header from './header/Header';
+import FooterTop from './footerTop/FooterTop';
 import Footer from './footer/Footer';
 
 const geistSans = localFont({
@@ -51,6 +52,7 @@ export default function RootLayout({ children }) {
     </header> */}
     <main>{children}</main>
 
+    <FooterTop />
     <Footer />
     {/* <footer style={footerStyle}>
       <p>&copy; {new Date().getFullYear()} LEXI Construction Services. All Rights Reserved.</p>
