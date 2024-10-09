@@ -92,11 +92,6 @@ const footerStyle = {
   boxShadow: '0 -2px 10px rgba(0, 0, 0, 0.15)',
   backgroundImage: `url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjEwMCIgd2lkdGg9IjEwMCI+PHJlY3Qgd2lkdGg9IjEwMCUgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjNzU1NjNDIi8+PHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiB4PSI1IiB5PSI1IiBmaWxsPSIjNEMzQzJFIiBvcGFjaXR5PSIwLjYiLz48L3N2Zz4=)`, // Flecks effect
   backgroundSize: 'contain',
-  
-  // textAlign: 'center',
-  // padding: '10px',
-  // backgroundColor: '#000080',
-  // color: '#FFD700',
 };
 
 const logoStyle = {

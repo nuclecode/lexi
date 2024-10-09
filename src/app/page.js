@@ -2,7 +2,7 @@ import React from "react";
 
 const HomePage = () => {
   return (
-    <section style={sectionStyles}>
+    <section style={sectionStyles}> 
       
         <h1 style={headingStyles}>Welcome to LEXI Construction Services</h1>
 

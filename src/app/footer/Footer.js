@@ -11,7 +11,7 @@ const Footer = () => {
           <Image src={logo} alt="LEXI Logo" width={350} height={150}/>
         </div>
         <div style={footerColumn}>
-          <h4 style={footerTitleStyles}>FOR</h4>
+          <h4 style={footerTitleStyles}>FOR </h4>
           <ul style={listStyles}>
             <li style={listItemStyles}>Landlords</li>
             <li style={listItemStyles}>Investors</li>
