@@ -1,0 +1,79 @@
+@import '../../styles/variables.scss'; 
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    overflow: hidden;
+  
+    &__video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+  
+    &__overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      // background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+      z-index: 0;
+    }
+  
+    &__content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      color: #ffffff;
+      max-width: 800px;
+      padding: 0 20px;
+    }
+  
+    &__title {
+      font-size: 48px;
+      color: #F8E370; /* Light yellow */
+      margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 3rem;
+        color: #EFA92F;
+    }
+
+    p {
+        font-size: 1.5rem;
+        color: #F8E370;
+    }
+  
+    &__subtitle {
+      font-size: 24px;
+      color: #EFA92F; /* Dark yellow */
+      margin-bottom: 40px;
+    }
+  
+    &__button {
+      background-color: #4C3C2E; /* Dark brown */
+      color: #FFFFFF; /* White */
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: #75563C; /* Light brown */
+      }
+    }
+  }
+  

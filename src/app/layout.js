@@ -1,12 +1,13 @@
 import './globals.css';
+import styles from './layout.module.scss';
 import Link from 'next/link';
 
 import localFont from "next/font/local";
 import "../styles/globals.scss";
 
-import Header from './header/Header';
-import FooterTop from './footerTop/FooterTop';
-import Footer from './footer/Footer';
+import Header from '../components/header/Header';
+import FooterTop from '../components/footerTop/FooterTop';
+import Footer from '../components/footer/Footer';
 
 
 const geistSans = localFont({
@@ -33,7 +34,7 @@ export default function RootLayout({ children }) {
       </head>
     <body className={`${geistSans.variable} ${geistMono.variable}`}>
 
-      <Header />
+      <Header className={styles.header} />
       
 {/* 
     <header style={headerStyle}>
@@ -53,8 +54,8 @@ export default function RootLayout({ children }) {
     </header> */}
     <main>{children}</main>
 
-    <FooterTop />
-    <Footer />
+    <FooterTop className={styles.footer} />
+    <Footer className={styles.footer} />
     {/* <footer style={footerStyle}>
       <p>&copy; {new Date().getFullYear()} LEXI Construction Services. All Rights Reserved.</p>
       <p className="footer-engineered">

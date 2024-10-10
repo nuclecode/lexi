@@ -1,0 +1,737 @@
+// Define color variables
+$white: #FFFFFF;
+$light-yellow: #F8E370;
+$dark-yellow: #EFA92F;
+$light-brown: #75563C;
+$dark-brown: #4C3C2E;
+$light-grey: #ADADAD;
+$dark-grey: #848484;
+
+.caseRenovation {
+  position: relative;
+  min-height: 100vh; // Ensure each case takes up full screen height
+  overflow: hidden; // Prevent overflow issues
+
+  .orderText {
+    font-size: 24px;
+    color: $dark-yellow;
+    padding: 20px;
+    background-color: $light-brown;
+    border-left: 10px solid $dark-brown;
+    margin-bottom: 20px;
+    z-index: 2; // Ensure text is above other elements
+  }
+
+  .beforePhoto, .afterPhoto {
+    position: relative;
+    width: 100%;
+    height: 100vh; // Fullscreen height
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .overlayText {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $white;
+      font-size: 32px;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+      z-index: 2; // Ensure overlay text is above the image
+    }
+  }
+
+  .doneText {
+    font-size: 20px;
+    color: $white;
+    background-color: $dark-grey;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    min-height: 100vh; // Ensure fullscreen like the photos
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1; // Below the photos
+  }
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; // Keep the height to match the viewport
+    z-index: 1; // Ensure the sticky element is above others
+  }
+
+  .afterPhoto.sticky {
+    z-index: 2; // Ensure "after" photo is above "before" when sticky
+  }
+}
+
+
+
+
+// // Define color variables
+// $white: #FFFFFF;
+// $light-yellow: #F8E370;
+// $dark-yellow: #EFA92F;
+// $light-brown: #75563C;
+// $dark-brown: #4C3C2E;
+// $light-grey: #ADADAD;
+// $dark-grey: #848484;
+
+// .caseRenovation {
+//   position: relative;
+//   min-height: 100vh; // Ensure each case takes up full screen height
+
+//   .orderText {
+//     font-size: 24px;
+//     color: $dark-yellow;
+//     padding: 20px;
+//     background-color: $light-brown;
+//     border-left: 10px solid $dark-brown;
+//     margin-bottom: 20px;
+//   }
+
+//   .beforePhoto, .afterPhoto {
+//     position: relative;
+//     width: 100%;
+//     height: 100vh; // Fullscreen height
+//     text-align: center;
+//     img {
+//       width: 100%;
+//       height: 100%;
+//       object-fit: cover;
+//     }
+
+//     .overlayText {
+//       position: absolute;
+//       top: 50%;
+//       left: 50%;
+//       transform: translate(-50%, -50%);
+//       color: $white;
+//       font-size: 32px;
+//       font-weight: bold;
+//       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+//     }
+//   }
+
+//   .doneText {
+//     font-size: 20px;
+//     color: $white;
+//     background-color: $dark-grey;
+//     padding: 20px;
+//     text-align: center;
+//     position: relative;
+//     min-height: 100vh; // Ensure fullscreen like the photos
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//   }
+
+//   .sticky {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100vh; // Keep the height to match the viewport
+//     z-index: 1;
+//   }
+
+//   .afterPhoto.sticky {
+//     z-index: 2; // Ensure "after" photo is above "before" when sticky
+//   }
+
+//   &::after {
+//     content: "";
+//     display: block;
+//     height: 100px; // Adjust to ensure footer space
+//   }
+// }
+
+
+
+
+// // // Define color variables
+// // $white: #FFFFFF;
+// // $light-yellow: #F8E370;
+// // $dark-yellow: #EFA92F;
+// // $light-brown: #75563C;
+// // $dark-brown: #4C3C2E;
+// // $light-grey: #ADADAD;
+// // $dark-grey: #848484;
+
+// // .caseRenovation {
+// //   position: relative;
+// //   min-height: 100vh; // Ensure each case takes up full screen height
+
+// //   .orderText {
+// //     font-size: 24px;
+// //     color: $dark-yellow;
+// //     padding: 20px;
+// //     background-color: $light-brown;
+// //     border-left: 10px solid $dark-brown;
+// //     margin-bottom: 20px;
+// //   }
+
+// //   .beforePhoto, .afterPhoto {
+// //     position: relative;
+// //     width: 100%;
+// //     height: 100vh; // Fullscreen height
+// //     text-align: center;
+// //     img {
+// //       width: 100%;
+// //       height: 100%;
+// //       object-fit: cover;
+// //     }
+
+// //     .overlayText {
+// //       position: absolute;
+// //       top: 50%;
+// //       left: 50%;
+// //       transform: translate(-50%, -50%);
+// //       color: $white;
+// //       font-size: 32px;
+// //       font-weight: bold;
+// //       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+// //     }
+// //   }
+
+// //   .doneText {
+// //     font-size: 20px;
+// //     color: $white;
+// //     background-color: $dark-grey;
+// //     padding: 20px;
+// //     text-align: center;
+// //     margin-bottom: 20px;
+// //     position: relative;
+// //     height: 100vh; // Ensure it's fullscreen like the photos
+// //   }
+
+// //   .sticky {
+// //     position: fixed;
+// //     top: 0;
+// //     left: 0;
+// //     width: 100%;
+// //     height: 100vh; // Keep the height to match the viewport
+// //     z-index: 1;
+// //   }
+
+// //   .afterPhoto.sticky {
+// //     z-index: 2; // Ensure "after" photo is above "before" when sticky
+// //   }
+
+// //   &::after {
+// //     content: "";
+// //     display: block;
+// //     height: 100px; // Adjust to ensure footer space
+// //   }
+// // }
+
+
+
+// // // // Define color variables
+// // // $white: #FFFFFF;
+// // // $light-yellow: #F8E370;
+// // // $dark-yellow: #EFA92F;
+// // // $light-brown: #75563C;
+// // // $dark-brown: #4C3C2E;
+// // // $light-grey: #ADADAD;
+// // // $dark-grey: #848484;
+
+// // // .caseRenovation {
+// // //   margin-bottom: 100px;
+// // //   position: relative;
+// // //   min-height: 100vh; // Ensure each case takes up full screen height
+
+// // //   .orderText {
+// // //     font-size: 24px;
+// // //     color: $dark-yellow;
+// // //     padding: 20px;
+// // //     background-color: $light-brown;
+// // //     border-left: 10px solid $dark-brown;
+// // //     margin-bottom: 20px;
+// // //   }
+
+// // //   .beforePhoto, .afterPhoto {
+// // //     margin: 0;
+// // //     padding: 0;
+// // //     text-align: center;
+// // //     img {
+// // //       max-width: 100%;
+// // //       height: auto;
+// // //       object-fit: cover;
+// // //     }
+// // //   }
+
+// // //   .doneText {
+// // //     font-size: 20px;
+// // //     color: $white;
+// // //     background-color: $dark-grey;
+// // //     padding: 20px;
+// // //     text-align: center;
+// // //     margin-bottom: 20px;
+// // //   }
+
+// // //   .sticky {
+// // //     position: fixed;
+// // //     top: 0;
+// // //     left: 0;
+// // //     width: 100%;
+// // //     z-index: 1;
+// // //     transition: all 0.3s ease-in-out; // Smooth transition for sticky elements
+// // //   }
+
+// // //   .afterPhoto.sticky {
+// // //     z-index: 2; // Ensure "after" photo is above "before" when sticky
+// // //   }
+
+// // //   // Ensure footer never overlaps
+// // //   &::after {
+// // //     content: "";
+// // //     display: block;
+// // //     height: 100px; // Adjust as needed based on the height of the footer
+// // //   }
+// // // }
+
+
+
+
+// // // // // Define color variables
+// // // // $white: #FFFFFF;
+// // // // $light-yellow: #F8E370;
+// // // // $dark-yellow: #EFA92F;
+// // // // $light-brown: #75563C;
+// // // // $dark-brown: #4C3C2E;
+// // // // $light-grey: #ADADAD;
+// // // // $dark-grey: #848484;
+
+// // // // .caseRenovation {
+// // // //   margin-bottom: 100px;
+// // // //   position: relative;
+// // // //   min-height: 100vh; // Ensure each case takes up full screen height
+
+// // // //   .orderText {
+// // // //     font-size: 24px;
+// // // //     color: $dark-yellow;
+// // // //     padding: 20px;
+// // // //     background-color: $light-brown;
+// // // //     border-left: 10px solid $dark-brown;
+// // // //     margin-bottom: 20px;
+// // // //   }
+
+// // // //   .beforePhoto, .afterPhoto {
+// // // //     margin: 0;
+// // // //     padding: 0;
+// // // //     text-align: center;
+// // // //     img {
+// // // //       max-width: 100%;
+// // // //       height: auto;
+// // // //       object-fit: cover;
+// // // //     }
+// // // //   }
+
+// // // //   .doneText {
+// // // //     font-size: 20px;
+// // // //     color: $white;
+// // // //     background-color: $dark-grey;
+// // // //     padding: 20px;
+// // // //     text-align: center;
+// // // //     margin-bottom: 20px;
+// // // //   }
+
+// // // //   .sticky {
+// // // //     position: fixed;
+// // // //     top: 0;
+// // // //     left: 0;
+// // // //     width: 100%;
+// // // //     z-index: 1;
+// // // //   }
+
+// // // //   .afterPhoto.sticky {
+// // // //     z-index: 2; // Ensure "after" photo is above "before" when sticky
+// // // //   }
+
+// // // //   // Additional spacing for the page to not cover the footer
+// // // //   &::after {
+// // // //     content: "";
+// // // //     display: block;
+// // // //     height: 100px; // Adjust as needed based on the height of the footer
+// // // //   }
+// // // // }
+
+
+
+// // // // // // Define color variables
+// // // // // $white: #FFFFFF;
+// // // // // $light-yellow: #F8E370;
+// // // // // $dark-yellow: #EFA92F;
+// // // // // $light-brown: #75563C;
+// // // // // $dark-brown: #4C3C2E;
+// // // // // $light-grey: #ADADAD;
+// // // // // $dark-grey: #848484;
+
+// // // // // .caseRenovation {
+// // // // //   margin-bottom: 100px;
+// // // // //   position: relative;
+// // // // //   min-height: 100vh; // Ensure each case takes up full screen height
+
+// // // // //   .orderText {
+// // // // //     font-size: 24px;
+// // // // //     color: $dark-yellow;
+// // // // //     padding: 20px;
+// // // // //     background-color: $light-brown;
+// // // // //     border-left: 10px solid $dark-brown;
+// // // // //     margin-bottom: 20px;
+// // // // //   }
+
+// // // // //   .beforePhoto, .afterPhoto {
+// // // // //     margin: 0;
+// // // // //     padding: 0;
+// // // // //     text-align: center;
+// // // // //     img {
+// // // // //       max-width: 100%;
+// // // // //       height: auto;
+// // // // //       object-fit: cover;
+// // // // //     }
+// // // // //   }
+
+// // // // //   .doneText {
+// // // // //     font-size: 20px;
+// // // // //     color: $white;
+// // // // //     background-color: $dark-grey;
+// // // // //     padding: 20px;
+// // // // //     text-align: center;
+// // // // //     margin-bottom: 20px;
+// // // // //   }
+
+// // // // //   .sticky {
+// // // // //     position: fixed;
+// // // // //     top: 0;
+// // // // //     left: 0;
+// // // // //     width: 100%;
+// // // // //     z-index: 1;
+// // // // //   }
+
+// // // // //   .afterPhoto.sticky {
+// // // // //     z-index: 2; // Ensure "after" photo is above "before" when sticky
+// // // // //   }
+
+// // // // //   // Additional spacing for the page to not cover the footer
+// // // // //   &::after {
+// // // // //     content: "";
+// // // // //     display: block;
+// // // // //     height: 100px; // Adjust as needed based on the height of the footer
+// // // // //   }
+// // // // // }
+
+
+
+// // // // // // // Define color variables
+// // // // // // $white: #FFFFFF;
+// // // // // // $light-yellow: #F8E370;
+// // // // // // $dark-yellow: #EFA92F;
+// // // // // // $light-brown: #75563C;
+// // // // // // $dark-brown: #4C3C2E;
+// // // // // // $light-grey: #ADADAD;
+// // // // // // $dark-grey: #848484;
+
+// // // // // // .caseRenovation {
+// // // // // //   margin-bottom: 100px;
+// // // // // //   position: relative;
+// // // // // //   min-height: 100vh; // Ensure each case takes up full screen height
+
+// // // // // //   .orderText {
+// // // // // //     font-size: 24px;
+// // // // // //     color: $dark-yellow;
+// // // // // //     padding: 20px;
+// // // // // //     background-color: $light-brown;
+// // // // // //     border-left: 10px solid $dark-brown;
+// // // // // //     margin-bottom: 20px;
+// // // // // //   }
+
+// // // // // //   .beforePhoto, .afterPhoto {
+// // // // // //     margin: 0;
+// // // // // //     padding: 0;
+// // // // // //     text-align: center;
+// // // // // //     img {
+// // // // // //       max-width: 100%;
+// // // // // //       height: auto;
+// // // // // //       object-fit: cover;
+// // // // // //     }
+// // // // // //   }
+
+// // // // // //   .doneText {
+// // // // // //     font-size: 20px;
+// // // // // //     color: $white;
+// // // // // //     background-color: $dark-grey;
+// // // // // //     padding: 20px;
+// // // // // //     text-align: center;
+// // // // // //     margin-bottom: 20px;
+// // // // // //   }
+
+// // // // // //   .sticky {
+// // // // // //     position: fixed;
+// // // // // //     top: 0;
+// // // // // //     left: 0;
+// // // // // //     width: 100%;
+// // // // // //     z-index: 1;
+// // // // // //   }
+
+// // // // // //   .afterPhoto.sticky {
+// // // // // //     z-index: 2; // Ensure "after" photo is above "before" when sticky
+// // // // // //   }
+
+// // // // // //   // Additional spacing for the page to not cover the footer
+// // // // // //   &::after {
+// // // // // //     content: "";
+// // // // // //     display: block;
+// // // // // //     height: 100px; // Adjust as needed based on the height of the footer
+// // // // // //   }
+// // // // // // }
+
+
+
+
+// // // // // // // // Define color variables
+// // // // // // // $white: #FFFFFF;
+// // // // // // // $light-yellow: #F8E370;
+// // // // // // // $dark-yellow: #EFA92F;
+// // // // // // // $light-brown: #75563C;
+// // // // // // // $dark-brown: #4C3C2E;
+// // // // // // // $light-grey: #ADADAD;
+// // // // // // // $dark-grey: #848484;
+
+// // // // // // // .caseRenovation {
+// // // // // // //   margin-bottom: 100px;
+// // // // // // //   position: relative;
+// // // // // // //   min-height: 100vh; // Ensure each case takes up full screen height
+
+// // // // // // //   .orderText {
+// // // // // // //     font-size: 24px;
+// // // // // // //     color: $dark-yellow;
+// // // // // // //     padding: 20px;
+// // // // // // //     background-color: $light-brown;
+// // // // // // //     border-left: 10px solid $dark-brown;
+// // // // // // //     margin-bottom: 20px;
+// // // // // // //   }
+
+// // // // // // //   .beforePhoto, .afterPhoto {
+// // // // // // //     margin: 0;
+// // // // // // //     padding: 0;
+// // // // // // //     text-align: center;
+// // // // // // //     img {
+// // // // // // //       width: 300px;
+// // // // // // //       height: 300px;
+// // // // // // //       // max-width: 100%;
+// // // // // // //       // height: auto;
+// // // // // // //       object-fit: cover;
+// // // // // // //     }
+// // // // // // //   }
+
+// // // // // // //   .doneText {
+// // // // // // //     font-size: 20px;
+// // // // // // //     color: $white;
+// // // // // // //     background-color: $dark-grey;
+// // // // // // //     padding: 20px;
+// // // // // // //     text-align: center;
+// // // // // // //     margin-bottom: 20px;
+// // // // // // //   }
+
+// // // // // // //   .sticky {
+// // // // // // //     position: fixed;
+// // // // // // //     top: 0;
+// // // // // // //     left: 0;
+// // // // // // //     width: 100%;
+// // // // // // //     z-index: 1;
+// // // // // // //   }
+
+// // // // // // //   .afterPhoto.sticky {
+// // // // // // //     z-index: 2; // Ensure "after" photo is above "before" when sticky
+// // // // // // //   }
+
+// // // // // // //   // Additional spacing for the page to not cover the footer
+// // // // // // //   &::after {
+// // // // // // //     content: "";
+// // // // // // //     display: block;
+// // // // // // //     height: 100px; // Adjust as needed based on the height of the footer
+// // // // // // //   }
+// // // // // // // }
+
+
+// // // // // // // // // Define color variables
+// // // // // // // // $white: #FFFFFF;
+// // // // // // // // $light-yellow: #F8E370;
+// // // // // // // // $dark-yellow: #EFA92F;
+// // // // // // // // $light-brown: #75563C;
+// // // // // // // // $dark-brown: #4C3C2E;
+// // // // // // // // $light-grey: #ADADAD;
+// // // // // // // // $dark-grey: #848484;
+
+// // // // // // // // .caseRenovation {
+// // // // // // // //   margin-bottom: 100px;
+// // // // // // // //   position: relative;
+
+// // // // // // // //   .orderText {
+// // // // // // // //     font-size: 24px;
+// // // // // // // //     color: $dark-yellow;
+// // // // // // // //     padding: 20px;
+// // // // // // // //     background-color: $light-brown;
+// // // // // // // //     border-left: 10px solid $dark-brown;
+// // // // // // // //   }
+
+// // // // // // // //   .beforePhoto, .afterPhoto {
+// // // // // // // //     margin: 0;
+// // // // // // // //     padding: 0;
+// // // // // // // //     text-align: center;
+// // // // // // // //     img {
+// // // // // // // //       max-width: 100%;
+// // // // // // // //       height: auto;
+// // // // // // // //       object-fit: cover;
+// // // // // // // //     }
+// // // // // // // //   }
+
+// // // // // // // //   .doneText {
+// // // // // // // //     font-size: 20px;
+// // // // // // // //     color: $white;
+// // // // // // // //     background-color: $dark-grey;
+// // // // // // // //     padding: 20px;
+// // // // // // // //     text-align: center;
+// // // // // // // //   }
+
+// // // // // // // //   .sticky {
+// // // // // // // //     position: fixed;
+// // // // // // // //     top: 0;
+// // // // // // // //     left: 0;
+// // // // // // // //     width: 100%;
+// // // // // // // //     z-index: 2;
+// // // // // // // //   }
+// // // // // // // // }
+
+
+
+// // // // // // // // // // Define color variables
+// // // // // // // // // $white: #FFFFFF;
+// // // // // // // // // $light-yellow: #F8E370;
+// // // // // // // // // $dark-yellow: #EFA92F;
+// // // // // // // // // $light-brown: #75563C;
+// // // // // // // // // $dark-brown: #4C3C2E;
+// // // // // // // // // $light-grey: #ADADAD;
+// // // // // // // // // $dark-grey: #848484;
+
+// // // // // // // // // .caseRenovation {
+// // // // // // // // //   margin-bottom: 100px;
+// // // // // // // // //   position: relative;
+
+// // // // // // // // //   .orderText {
+// // // // // // // // //     font-size: 24px;
+// // // // // // // // //     color: $dark-yellow;
+// // // // // // // // //     padding: 20px;
+// // // // // // // // //     background-color: $light-brown;
+// // // // // // // // //     border-left: 10px solid $dark-brown;
+// // // // // // // // //   }
+
+// // // // // // // // //   .beforePhoto, .afterPhoto {
+// // // // // // // // //     margin: 0;
+// // // // // // // // //     padding: 0;
+// // // // // // // // //     text-align: center;
+// // // // // // // // //     img {
+// // // // // // // // //       max-width: 100%;
+// // // // // // // // //       height: auto;
+// // // // // // // // //       object-fit: cover;
+// // // // // // // // //     }
+// // // // // // // // //   }
+
+// // // // // // // // //   .doneText {
+// // // // // // // // //     font-size: 20px;
+// // // // // // // // //     color: $white;
+// // // // // // // // //     background-color: $dark-grey;
+// // // // // // // // //     padding: 20px;
+// // // // // // // // //     text-align: center;
+// // // // // // // // //   }
+
+// // // // // // // // //   .sticky {
+// // // // // // // // //     position: fixed;
+// // // // // // // // //     top: 0;
+// // // // // // // // //     left: 0;
+// // // // // // // // //     width: 100%;
+// // // // // // // // //     z-index: 2;
+// // // // // // // // //   }
+
+// // // // // // // // //   .scrollOverBefore {
+// // // // // // // // //     position: relative;
+// // // // // // // // //     z-index: 3;
+// // // // // // // // //     top: 50vh; // Moves the text to halfway point of the viewport
+// // // // // // // // //   }
+
+// // // // // // // // //   .scrollOverBefore.sticky {
+// // // // // // // // //     top: 0; // Ensure doneText sticks when it reaches the top
+// // // // // // // // //   }
+// // // // // // // // // }
+
+
+
+// // // // // // // // // // // Define color variables
+// // // // // // // // // // $white: #FFFFFF;
+// // // // // // // // // // $light-yellow: #F8E370;
+// // // // // // // // // // $dark-yellow: #EFA92F;
+// // // // // // // // // // $light-brown: #75563C;
+// // // // // // // // // // $dark-brown: #4C3C2E;
+// // // // // // // // // // $light-grey: #ADADAD;
+// // // // // // // // // // $dark-grey: #848484;
+
+// // // // // // // // // // .caseRenovation {
+// // // // // // // // // //   margin-bottom: 100px;
+// // // // // // // // // //   position: relative;
+
+// // // // // // // // // //   .orderText {
+// // // // // // // // // //     font-size: 24px;
+// // // // // // // // // //     color: $dark-yellow;
+// // // // // // // // // //     padding: 20px;
+// // // // // // // // // //     background-color: $light-brown;
+// // // // // // // // // //     border-left: 10px solid $dark-brown;
+// // // // // // // // // //   }
+
+// // // // // // // // // //   .beforePhoto, .afterPhoto {
+// // // // // // // // // //     margin: 0;
+// // // // // // // // // //     padding: 0;
+// // // // // // // // // //     text-align: center;
+// // // // // // // // // //     img {
+// // // // // // // // // //       max-width: 100%;
+// // // // // // // // // //       height: auto;
+// // // // // // // // // //       object-fit: cover;
+// // // // // // // // // //     }
+// // // // // // // // // //   }
+
+// // // // // // // // // //   .doneText {
+// // // // // // // // // //     font-size: 20px;
+// // // // // // // // // //     color: $white;
+// // // // // // // // // //     background-color: $dark-grey;
+// // // // // // // // // //     padding: 20px;
+// // // // // // // // // //     text-align: center;
+// // // // // // // // // //   }
+
+// // // // // // // // // //   .sticky {
+// // // // // // // // // //     position: fixed;
+// // // // // // // // // //     top: 0;
+// // // // // // // // // //     left: 0;
+// // // // // // // // // //     width: 100%;
+// // // // // // // // // //     z-index: 2;
+// // // // // // // // // //   }
+
+// // // // // // // // // //   .scrollOverBefore {
+// // // // // // // // // //     position: relative;
+// // // // // // // // // //     z-index: 3;
+// // // // // // // // // //     top: 50vh; // Moves the text to halfway point of the viewport
+// // // // // // // // // //   }
+// // // // // // // // // // }
