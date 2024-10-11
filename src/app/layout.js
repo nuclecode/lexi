@@ -29,9 +29,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
+      {/* <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-      </head>
+      </head> */}
     <body className={`${geistSans.variable} ${geistMono.variable}`}>
 
       <Header className={styles.header} />
@@ -83,9 +83,9 @@ const navStyle = {
 };
 
 const footerStyle = {
-  backgroundColor: '#75563C', // Light brown
+  backgroundColor: '#75563C',
   padding: '20px',
-  color: '#F8E370', // Light yellow
+  color: '#F8E370',
   position: 'relative',
   display: 'flex',
   justifyContent: 'center',
@@ -94,6 +94,11 @@ const footerStyle = {
   boxShadow: '0 -2px 10px rgba(0, 0, 0, 0.15)',
   backgroundImage: `url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjEwMCIgd2lkdGg9IjEwMCI+PHJlY3Qgd2lkdGg9IjEwMCUgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjNzU1NjNDIi8+PHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiB4PSI1IiB5PSI1IiBmaWxsPSIjNEMzQzJFIiBvcGFjaXR5PSIwLjYiLz48L3N2Zz4=)`, // Flecks effect
   backgroundSize: 'contain',
+
+  // textAlign: 'center',
+  // padding: '10px',
+  // backgroundColor: '#000080',
+  // color: '#FFD700',
 };
 
 const logoStyle = {

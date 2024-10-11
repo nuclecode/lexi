@@ -29,7 +29,7 @@ export default function Header() {
         <Image src={logo} alt="LEXI Logo" width={160} height={90} />
       </div>
       <nav style={navStyles}>
-        <a href="/" style={linkStyles}>Home</a>
+        <a href="/src/public" style={linkStyles}>Home</a>
         <a href="/about" style={linkStyles}>About Us</a>
         <a href="/services" style={linkStyles}>Services</a>
         <a href="/solutions" style={linkStyles}>Solutions</a>
