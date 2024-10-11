@@ -16,14 +16,40 @@ export default function Header() {
   const menuItems = ['/', '/about', '/services', '/solutions', '/contact'];
   const router = useRouter();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsTransparent(window.scrollY > 50);
+  const handleScroll = () => {
+    setIsTransparent(window.scrollY > 50);
   };
 
+
+  useEffect(() => {
+    
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [handleScroll]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setGlowIndex((prevIndex) => {
+        let newIndex;
+        do {
+          newIndex = Math.floor(Math.random() * menuItems.length);
+        } while (newIndex === prevIndex); // Avoid glowing the same item consecutively
+        return newIndex;
+      });
+    }, 2000); // Change the glowing item every 2 seconds
+
+    return () => clearInterval(interval);
+  }, [menuItems]);
+
+  const handleMenuItemClick = (page) => {
+    setCurrentPage(page);
+    router.push(page);
+    setIsMenuOpen(false); // Close the menu after clicking a link
+  };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
 
   useEffect(() => {
@@ -66,7 +92,9 @@ export default function Header() {
           </a>
         ))}
       </nav>
-      <div className={styles.callButton} onClick={() => window.location.href = 'tel:+1234567890'}>
+
+      <div className={styles.callButton} onClick={() => window.location.href = 'tel:+44(0)7482051203'}>
+
         Call Us
       </div>
       <div className={styles.burgerMenu} onClick={toggleMenu}>☰</div>
