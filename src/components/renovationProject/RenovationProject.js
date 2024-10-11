@@ -2,6 +2,7 @@
 
 import styles from './RenovationProject.module.scss';
 import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image'
 
 export default function RenovationProject() {
   const beforeImageRef = useRef(null);
@@ -37,7 +38,7 @@ export default function RenovationProject() {
 
       <div className={styles.imageContainer}>
         {/* Фото "До" */}
-        <img 
+        <Image 
           ref={beforeImageRef} 
           src="/images/bathroom_before.PNG" 
           alt="Before Renovation" 
@@ -51,7 +52,7 @@ export default function RenovationProject() {
       </div>
 
       {/* Фото "После" */}
-      <img 
+      <Image 
         src="/images/bathroom_after.PNG" 
         alt="After Renovation" 
         className={styles.afterImage}
@@ -100,7 +101,7 @@ export default function RenovationProject() {
 
 //       {/* Фото "До" */}
 //       <div className={styles.imageContainer}>
-//         <img 
+//         <Image 
 //           ref={beforeImageRef} 
 //           src="/images/bathroom_before.PNG" 
 //           alt="Before Renovation" 
@@ -114,7 +115,7 @@ export default function RenovationProject() {
 //       </div>
 
 //       {/* Фото "После" */}
-//       <img 
+//       <Image 
 //         src="/images/bathroom_after.PNG" 
 //         alt="After Renovation" 
 //         className={styles.afterImage}
@@ -167,7 +168,7 @@ export default function RenovationProject() {
       
 // //       {/* Фото "До" */}
 // //       <div className={styles.imageContainer}>
-// //         <img 
+// //         <Image 
 // //           ref={beforeImageRef} 
 // //           src="/images/bathroom_before.PNG" 
 // //           alt="Before Renovation" 
@@ -181,7 +182,7 @@ export default function RenovationProject() {
 // //       </div>
       
 // //       {/* Фото "После" */}
-// //       <img 
+// //       <Image 
 // //         ref={afterImageRef} 
 // //         src="/images/bathroom_after.PNG" 
 // //         alt="After Renovation" 
@@ -231,7 +232,7 @@ export default function RenovationProject() {
 // // //       </section>
       
 // // //       {/* Фото "До" */}
-// // //       <img 
+// // //       <Image 
 // // //         ref={beforeImageRef} 
 // // //         src="/images/bathroom_before.PNG" 
 // // //         alt="Before Renovation" 
@@ -247,7 +248,7 @@ export default function RenovationProject() {
 // // //       </section>
       
 // // //       {/* Фото "После" */}
-// // //       <img 
+// // //       <Image 
 // // //         ref={afterImageRef} 
 // // //         src="/images/bathroom_after.PNG" 
 // // //         alt="After Renovation" 
@@ -283,7 +284,7 @@ export default function RenovationProject() {
 // // // //       </section>
       
 // // // //       {/* Фото "До" */}
-// // // //       <img 
+// // // //       <Image 
 // // // //         ref={beforeImageRef} 
 // // // //         src="/images/bathroom_before.PNG" 
 // // // //         alt="Before Renovation" 
@@ -297,7 +298,7 @@ export default function RenovationProject() {
 // // // //       </section>
       
 // // // //       {/* Фото "После" */}
-// // // //       <img 
+// // // //       <Image 
 // // // //         ref={afterImageRef} 
 // // // //         src="/images/bathroom_after.PNG" 
 // // // //         alt="After Renovation" 
@@ -335,7 +336,7 @@ export default function RenovationProject() {
 // // // // //       </section>
       
 // // // // //       {/* Фото "До" */}
-// // // // //       <img 
+// // // // //       <Image 
 // // // // //         ref={beforeImageRef} 
 // // // // //         src="/images/bathroom_before.PNG" 
 // // // // //         alt="Before Renovation" 
@@ -349,7 +350,7 @@ export default function RenovationProject() {
 // // // // //       </section>
       
 // // // // //       {/* Фото "После" */}
-// // // // //       <img 
+// // // // //       <Image 
 // // // // //         ref={afterImageRef} 
 // // // // //         src="/images/bathroom_after.PNG" 
 // // // // //         alt="After Renovation" 
@@ -384,7 +385,7 @@ export default function RenovationProject() {
 // // // // // //       <p>This is what the client originally requested...</p>
       
 // // // // // //       {/* Before Image */}
-// // // // // //       <img 
+// // // // // //       <Image 
 // // // // // //         ref={beforeImageRef} 
 // // // // // //         src="/images/bathroom_before.PNG" 
 // // // // // //         alt="Before Renovation" 
@@ -397,7 +398,7 @@ export default function RenovationProject() {
 // // // // // //       </div>
       
 // // // // // //       {/* After Image */}
-// // // // // //       <img 
+// // // // // //       <Image 
 // // // // // //         ref={afterImageRef} 
 // // // // // //         src="/images/bathroom_after.PNG" 
 // // // // // //         alt="After Renovation" 
@@ -538,7 +539,7 @@ export default function RenovationProject() {
 
 // // // // // // // // //       {/* Фото "До" */}
 // // // // // // // // //       <section className={styles.beforePhoto}>
-// // // // // // // // //         <img src="/images/bathroom_after.PNG" alt="Bathroom After Renovation" className={styles.image} />
+// // // // // // // // //         <Image src="/images/bathroom_after.PNG" alt="Bathroom After Renovation" className={styles.image} />
 // // // // // // // // //       </section>
 
 // // // // // // // // //       {/* Текст о выполненных работах */}
@@ -549,7 +550,7 @@ export default function RenovationProject() {
 
 // // // // // // // // //       {/* Фото "После" */}
 // // // // // // // // //       <section className={styles.afterPhoto}>
-// // // // // // // // //         <img src="/images/bathroom_after.PNG" alt="Bathroom After Renovation" className={styles.image} />
+// // // // // // // // //         <Image src="/images/bathroom_after.PNG" alt="Bathroom After Renovation" className={styles.image} />
 // // // // // // // // //       </section>
 // // // // // // // // //     </div>
 // // // // // // // // //   );
@@ -571,7 +572,7 @@ export default function RenovationProject() {
 
 // // // // // // // // // //       {/* Фото "До" */}
 // // // // // // // // // //       <section className={styles.beforePhoto}>
-// // // // // // // // // //         <img src="/images/bathroom_before.PNG" alt="Bathroom Before Renovation" className={styles.image} />
+// // // // // // // // // //         <Image src="/images/bathroom_before.PNG" alt="Bathroom Before Renovation" className={styles.image} />
 // // // // // // // // // //       </section>
 
 // // // // // // // // // //       {/* Текст о том, что было сделано */}
@@ -582,7 +583,7 @@ export default function RenovationProject() {
 
 // // // // // // // // // //       {/* Фото "После" */}
 // // // // // // // // // //       <section className={styles.afterPhoto}>
-// // // // // // // // // //         <img src="/images/bathroom_after.PNG" alt="Bathroom After Renovation" className={styles.image}  />
+// // // // // // // // // //         <Image src="/images/bathroom_after.PNG" alt="Bathroom After Renovation" className={styles.image}  />
 // // // // // // // // // //       </section>
 // // // // // // // // // //     </div>
 // // // // // // // // // //   );
@@ -673,7 +674,7 @@ export default function RenovationProject() {
 // // // // // // // // // // //     <section className={styles.beforeSection}>
 // // // // // // // // // // //       {/* <div className={`${styles.imageBefore} ${scrollPosition > 300 ? styles.fixed : ''}`}> */}
 // // // // // // // // // // //       <div ref={beforeImageRef} className={`${styles.beforeImage} ${isStuck ? styles.stuck : ''}`}>
-// // // // // // // // // // //         <img src="/images/bathroom_before.PNG" alt="Bathroom Before Renovation"  />
+// // // // // // // // // // //         <Image src="/images/bathroom_before.PNG" alt="Bathroom Before Renovation"  />
 // // // // // // // // // // //       </div>
 // // // // // // // // // // //     </section>
 
@@ -691,7 +692,7 @@ export default function RenovationProject() {
 // // // // // // // // // // //        {/* <div className={`${styles.imageAfter} ${scrollPosition > 800 ? styles.fixed : ''}`}> */}
 
 // // // // // // // // // // //     <section className={`${styles.afterSection} ${isAfterVisible ? styles.visible : ''}`}>
-// // // // // // // // // // //         <img ref={afterImageRef} src="/images/bathroom_after.PNG" alt="Bathroom After Renovation" />
+// // // // // // // // // // //         <Image ref={afterImageRef} src="/images/bathroom_after.PNG" alt="Bathroom After Renovation" />
 // // // // // // // // // // //       {/* </div> */}
 // // // // // // // // // // //       {/* </div> */}
 // // // // // // // // // // //     </section>
