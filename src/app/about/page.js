@@ -16,13 +16,6 @@ export default function About() {
             <AboutDescription />
 
             <ChooseUs />
-        <div className={styles.container}>
-            <h1 className={styles.header}>About Us</h1>
-            <p className={styles.article}>We are a dedicated renovations company committed to quality and customer satisfaction.</p>
-
-            <AboutDescription />
-
-            <ChooseUs />
         </div>
     );
 }
