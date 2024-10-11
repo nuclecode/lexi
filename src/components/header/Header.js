@@ -5,7 +5,6 @@ import logo from '../../../public/Business card-LEXI_02_for PRINT-02.jpg';
 
 import styles from './Header.module.scss';
 import { useRouter } from 'next/navigation';
-import styles from '../../app/layout.module.scss';
 
 
 export default function Header() {
