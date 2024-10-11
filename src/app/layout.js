@@ -6,7 +6,6 @@ import localFont from "next/font/local";
 import "../styles/globals.scss";
 
 import Header from '../components/header/Header';
-import FooterTop from '../components/footerTop/FooterTop';
 import Footer from '../components/footer/Footer';
 
 
@@ -54,7 +53,7 @@ export default function RootLayout({ children }) {
     </header> */}
     <main>{children}</main>
 
-    <FooterTop className={styles.footer} />
+    {/*<FooterTop className={styles.footer} />*/}
     <Footer className={styles.footer} />
     {/* <footer style={footerStyle}>
       <p>&copy; {new Date().getFullYear()} LEXI Construction Services. All Rights Reserved.</p>

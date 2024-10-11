@@ -3,7 +3,7 @@ import styles from './Footer.module.scss';
 import Link from 'next/link';
 import footerlinks from './footerlinks';
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
-import logo from '../../public/Business card-LEXI_02_for PRINT-02.jpg';
+import logo from '../../../public/Business card-LEXI_02_for PRINT-02.jpg';
 import Image from 'next/image';
 
 
