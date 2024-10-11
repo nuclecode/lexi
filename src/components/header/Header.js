@@ -51,6 +51,31 @@ export default function Header() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setGlowIndex((prevIndex) => {
+        let newIndex;
+        do {
+          newIndex = Math.floor(Math.random() * menuItems.length);
+        } while (newIndex === prevIndex); // Avoid glowing the same item consecutively
+        return newIndex;
+      });
+    }, 2000); // Change the glowing item every 2 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const handleMenuItemClick = (page) => {
+    setCurrentPage(page);
+    router.push(page);
+    setIsMenuOpen(false); // Close the menu after clicking a link
+  };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <header className={`${styles.header} ${isTransparent ? styles.transparent : ''}`}>
       <div className={styles.logoContainer} onClick={() => handleMenuItemClick('/')}>
@@ -67,7 +92,9 @@ export default function Header() {
           </a>
         ))}
       </nav>
+
       <div className={styles.callButton} onClick={() => window.location.href = 'tel:+44(0)7482051203'}>
+
         Call Us
       </div>
       <div className={styles.burgerMenu} onClick={toggleMenu}>☰</div>

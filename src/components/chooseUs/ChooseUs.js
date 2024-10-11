@@ -1,6 +1,7 @@
 import styles from './ChooseUs.module.scss';
 
 export const metadata = {
+
     title: 'LEXI Construction Services - Choose Us',
     description: 'Learn about our company&apos;s mission, values, and team. Discover why we&apos;re the leading provider of Home, office, apartment renovation services',
   };
@@ -8,6 +9,7 @@ export const metadata = {
 export default function ChooseUs() {
         return (
         <article className={styles.article}>
+
             <header className={styles.header}>Why Choose Our LEXI Team</header>
             <main className={styles.main}> 
               <p>  
@@ -40,10 +42,12 @@ export default function ChooseUs() {
                 <li><h3>Client Satisfaction</h3>
                     <p>
                         Our success is measured by your satisfaction. With transparent communication and a focus on delivering exactly what you want, we strive to build long-lasting relationships with our clients.
+
                     </p>    
                 </li>
                 </ul>
         <p>
+
             Choose LEXI for reliable, high-quality renovations that transform your space into a home you&apos;ll love.
         </p>
         </main>    

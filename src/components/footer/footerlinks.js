@@ -20,6 +20,7 @@ const footerlinks = [
     {
         title: 'About Us',
         links: [
+
             { name: 'Our Team', href: '/ourTeam' },
             { name: 'Clients', href: '/clients' },
             { name: 'Collaborations', href: '/collaborations' },

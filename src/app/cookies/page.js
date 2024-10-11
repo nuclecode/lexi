@@ -1,8 +1,9 @@
 import styles from './Cookies.module.scss';
 
 export const metadata = {
-    title: 'LEXI Construction Services - Cookies',
-    description: 'Information on how we use cookies to enhance your experience on our website',
+
+    title: "LEXI Construction Services - Cookies",
+    description: "Information on how we use cookies to enhance your experience on our website",
 };
 
 export default function Cookies() {
@@ -18,6 +19,7 @@ export default function Cookies() {
 
             <h2 className={styles.subHeader}>Cookie settings</h2>
             <p className={styles.text}>
+
                 We use 4 types of cookies. You can choose which cookies you&apos;re happy for us to use.
             </p>
 
@@ -28,6 +30,7 @@ export default function Cookies() {
             <ul className={styles.list}>
                 <li>How you got to the site</li>
                 <li>The pages you visit and how long you spend on each</li>
+
                 <li>What you click on while you&apos;re visiting</li>
             </ul>
             <p className={styles.text}>
