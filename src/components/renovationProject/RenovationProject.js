@@ -1,24 +1,31 @@
 "use client";
-
 import styles from './RenovationProject.module.scss';
 import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 
 export default function RenovationProject() {
   const beforeImageRef = useRef(null);
   const [isSticky, setIsSticky] = useState(false);
   const [scrollY, setScrollY] = useState(0);
 
-  const handleScroll = () => {
-    setScrollY(window.scrollY);
-    const beforeImageHeight = beforeImageRef.current.offsetHeight;
+  useEffect(() => {
+    const handleScroll = () => {
+      const beforeImageHeight = beforeImageRef.current.offsetHeight; // Get height of the "before" image
 
-    // Приклеивание фото "до" и переход текста "сделано"
-    if (scrollY >= beforeImageHeight) {
-      setIsSticky(true);
-    } else {
-      setIsSticky(false);
-    }
-  };
+      // Sticky logic for "before" image and "done" text
+      if (window.scrollY >= beforeImageHeight) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -37,11 +44,13 @@ export default function RenovationProject() {
 
       <div className={styles.imageContainer}>
         {/* Фото "До" */}
-        <img 
+        <Image
           ref={beforeImageRef} 
           src="/images/bathroom_before.PNG" 
           alt="Before Renovation" 
           className={`${styles.beforeImage} ${isSticky ? styles.sticky : ''}`}
+          width={500} // Adjust based on your image size
+          height={300}
         />
 
         {/* Текст "Что мы сделали" */}
@@ -51,10 +60,12 @@ export default function RenovationProject() {
       </div>
 
       {/* Фото "После" */}
-      <img 
+      <Image
         src="/images/bathroom_after.PNG" 
         alt="After Renovation" 
         className={styles.afterImage}
+        width={500}
+        height={300}
       />
     </div>
   );
