@@ -48,7 +48,6 @@ const Solutions = () => {
 export default Solutions;
 
 
-
 // export default function Solutions() {
 //     return (
 //         <div>

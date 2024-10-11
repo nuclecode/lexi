@@ -1,8 +1,7 @@
 "use client";
-
-
 import { useEffect, useRef, useState } from 'react';
 import styles from './caseRenovation.module.scss';
+import Image from 'next/image';
 
 const CaseRenovation = ({ orderText, beforePhoto, doneText, afterPhoto }) => {
   const beforeRef = useRef(null);
@@ -56,7 +55,12 @@ const CaseRenovation = ({ orderText, beforePhoto, doneText, afterPhoto }) => {
         className={`${styles.beforePhoto} ${beforeSticky ? styles.sticky : ''}`}
         ref={beforeRef}
       >
-        <img src={beforePhoto} alt="Before renovation" />
+        <Image
+            src={beforePhoto}
+            alt="Before renovation"
+            width={500}
+            height={300} />
+
         <div className={styles.overlayText}>{orderText}</div>
       </div>
 
@@ -71,7 +75,13 @@ const CaseRenovation = ({ orderText, beforePhoto, doneText, afterPhoto }) => {
         className={`${styles.afterPhoto} ${showAfter ? styles.sticky : ''}`}
         ref={afterRef}
       >
-        <img src={afterPhoto} alt="After renovation" />
+        <Image
+            src={afterPhoto}
+            alt="After renovation"
+            width={500}
+            height={300}
+        />
+
         <div className={styles.overlayText}>{doneText}</div>
       </div>
     </div>
