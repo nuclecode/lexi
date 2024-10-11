@@ -1,8 +1,8 @@
 import styles from './Cookies.module.scss';
 
 export const metadata = {
-    title: "LEXI Construction Services - Cookies",
-    description: "Information on how we use cookies to enhance your experience on our website",
+    title: 'LEXI Construction Services - Cookies',
+    description: 'Information on how we use cookies to enhance your experience on our website',
 };
 
 export default function Cookies() {
@@ -18,7 +18,7 @@ export default function Cookies() {
 
             <h2 className={styles.subHeader}>Cookie settings</h2>
             <p className={styles.text}>
-                We use 4 types of cookies. You can choose which cookies you're happy for us to use.
+                We use 4 types of cookies. You can choose which cookies you&apos;re happy for us to use.
             </p>
 
             <h3 className={styles.subHeader}>Cookies that measure website use</h3>
@@ -28,7 +28,7 @@ export default function Cookies() {
             <ul className={styles.list}>
                 <li>How you got to the site</li>
                 <li>The pages you visit and how long you spend on each</li>
-                <li>What you click on while you're visiting</li>
+                <li>What you click on while you&apos;re visiting</li>
             </ul>
             <p className={styles.text}>
                 We also use LUX Real User Monitoring software cookies to measure your web performance experience. These cookies collect information about page performance on your device, including performance bottlenecks or JavaScript errors.
@@ -70,6 +70,17 @@ export default function Cookies() {
         </div>
     );
 }
+
+
+
+// export default function Cookies() {
+//     return (
+//         <div>
+//             <h1>Cookie Policy</h1>
+//             <p>Information about cookies used on the site.</p>
+//         </div>
+//     );
+// }
 
 
 

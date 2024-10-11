@@ -58,7 +58,7 @@ const Footer = () => {
                       <ul>
                       {column.links.map((link, linkIndex) => (
                               <li key={linkIndex}>
-                                  <Link as="a" href={link.href}>
+                                  <Link href={link.href}>
                                       {link.name}
                                   </Link>
                               </li>
@@ -126,7 +126,7 @@ const Footer = () => {
                       <span> | </span>
                       <Link href="/cookies">Cookies</Link>
                       <span> | </span>
-                      <Link  className={styles.sitemap} href="/sitemap">Sitemap</Link>
+                      <Link  className={styles.sitemap} href="/sitemap.xml">Sitemap</Link>
                   </div>
               </div>
               <div className={styles.developerContainer}>

@@ -4,7 +4,7 @@ import styles from './About.module.scss';
 
 export const metadata = {
     title: "LEXI Construction Services - About Us",
-    description: "Learn about our company's mission, values, and team. Discover why we're the leading provider of Home, office, apartment renovation services",
+    description: "Learn about our company&apos;s mission, values, and team. Discover why we&apos;re the leading provider of Home, office, apartment renovation services",
 };
 
 export default function About() {
@@ -28,7 +28,7 @@ export default function About() {
 
 // export const metadata = {
 //     title: "LEXI Construction Services - About Us",
-//     description: "Learn about our company's mission, values, and team. Discover why we're the leading provider of Home, office, apartment renovation services",
+//     description: "Learn about our company&apos;s mission, values, and team. Discover why we&apos;re the leading provider of Home, office, apartment renovation services",
 //   };
 
 // export default function About() {

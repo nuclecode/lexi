@@ -20,7 +20,7 @@ const footerlinks = [
     {
         title: 'About Us',
         links: [
-            { name: 'Our Team', href: '/our-team' },
+            { name: 'Our Team', href: '/ourTeam' },
             { name: 'Clients', href: '/clients' },
             { name: 'Collaborations', href: '/collaborations' },
             { name: 'Testimonials', href: '/testimonials' },
@@ -31,7 +31,7 @@ const footerlinks = [
         contact: {
             phone: '+44(0)7482051203',
             email: 'olexii@lexi.ltd',
-            address: '123 Renovation St, London',
+            address: 'London, United Kingdom',
         },
     },
 ];
