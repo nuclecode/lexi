@@ -2,74 +2,68 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import logo from '../../../public/Business card-LEXI_02_for PRINT-02.jpg'; 
-
-import styles from './Header.module.scss';
-import { useRouter } from 'next/navigation';
 import styles from '../../app/layout.module.scss';
 
 
 export default function Header() {
-  const [isTransparent, setIsTransparent] = useState(false);
-  const [currentPage, setCurrentPage] = useState('/');
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [glowIndex, setGlowIndex] = useState(0);
-  const menuItems = ['/', '/about', '/services', '/solutions', '/contact'];
-  const router = useRouter();
 
+  const [isTransparent, setIsTransparent] = useState(false);
+  
   useEffect(() => {
     const handleScroll = () => {
-      setIsTransparent(window.scrollY > 50);
-  };
+      if (window.scrollY > 200) {
+        setIsTransparent(true);
+      } else {
+        setIsTransparent(false);
+      }
+    };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setGlowIndex((prevIndex) => {
-        let newIndex;
-        do {
-          newIndex = Math.floor(Math.random() * menuItems.length);
-        } while (newIndex === prevIndex); // Avoid glowing the same item consecutively
-        return newIndex;
-      });
-    }, 2000); // Change the glowing item every 2 seconds
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const handleMenuItemClick = (page) => {
-    setCurrentPage(page);
-    router.push(page);
-    setIsMenuOpen(false); // Close the menu after clicking a link
-  };
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
   return (
+    // <header style={headerStyles}>
     <header className={`${styles.header} ${isTransparent ? styles.transparent : ''}`}>
-      <div className={styles.logoContainer} onClick={() => handleMenuItemClick('/')}>
+      <div style={logoContainer}>
         <Image src={logo} alt="LEXI Logo" width={160} height={90} />
       </div>
-      <nav className={`${styles.navStyles} ${isMenuOpen ? styles.showNav : ''}`}>
-        {menuItems.map((item, index) => (
-          <a 
-            key={item}
-            className={`${styles.linkStyles} ${currentPage === item ? styles.active : ''} ${glowIndex === index ? styles.glow : ''}`}
-            onClick={() => handleMenuItemClick(item)}
-          >
-            {item === '/' ? 'Home' : item.charAt(1).toUpperCase() + item.slice(2)} {/* Capitalize the first letter */}
-          </a>
-        ))}
+      <nav style={navStyles}>
+        <a href="/src/public" style={linkStyles}>Home</a>
+        <a href="/about" style={linkStyles}>About Us</a>
+        <a href="/services" style={linkStyles}>Services</a>
+        <a href="/solutions" style={linkStyles}>Solutions</a>
+        <a href="/contact" style={linkStyles}>Contact</a>
       </nav>
-      <div className={styles.callButton} onClick={() => window.location.href = 'tel:+1234567890'}>
-        Call Us
-      </div>
-      <div className={styles.burgerMenu} onClick={toggleMenu}>☰</div>
     </header>
   );
-}
+};
+
+const headerStyles = {
+  backgroundColor: '#75563C', // Light brown
+  color: '#F8E370', // Light yellow
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+  padding: '10px 50px',
+  boxShadow: '0px 4px 6px rgba(0, 0, 0, 0.1)',
+};
+
+const logoContainer = {
+  display: 'flex',
+  alignItems: 'center',
+};
+
+const navStyles = {
+  display: 'flex',
+  gap: '20px',
+};
+
+const linkStyles = {
+  color: '#FFFFFF', // White
+  textDecoration: 'none',
+  fontWeight: 'bold',
+  fontSize: '16px',
+};
+
+// export default Header;
