@@ -28,6 +28,19 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+    <head>
+      <script
+      dangerouslySetInnerHTML={{
+        __html:`
+            (function() {
+              var tidioScript = document.createElement("script");
+              tidioScript.src = "https://code.tidio.co/pw6cgje8ywzwekn7ougvgkukgbeiponl.js";
+              tidioScript.async = true;
+              document.head.appendChild(tidioScript);
+            })();`,
+      }}
+      />
+    </head>
       {/* <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </head> */}

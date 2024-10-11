@@ -53,8 +53,19 @@ export default function Header() {
   return (
     <header className={`${styles.header} ${isTransparent ? styles.transparent : ''}`}>
       <div className={styles.logoContainer} onClick={() => handleMenuItemClick('/')}>
+      <div className={styles.logoContainer} onClick={() => handleMenuItemClick('/')}>
         <Image src={logo} alt="LEXI Logo" width={160} height={90} />
       </div>
+      <nav className={`${styles.navStyles} ${isMenuOpen ? styles.showNav : ''}`}>
+        {menuItems.map((item, index) => (
+          <a 
+            key={item}
+            className={`${styles.linkStyles} ${currentPage === item ? styles.active : ''} ${glowIndex === index ? styles.glow : ''}`}
+            onClick={() => handleMenuItemClick(item)}
+          >
+            {item === '/' ? 'Home' : item.charAt(1).toUpperCase() + item.slice(2)} {/* Capitalize the first letter */}
+          </a>
+        ))}
       <nav className={`${styles.navStyles} ${isMenuOpen ? styles.showNav : ''}`}>
         {menuItems.map((item, index) => (
           <a 
@@ -72,4 +83,5 @@ export default function Header() {
       <div className={styles.burgerMenu} onClick={toggleMenu}>☰</div>
     </header>
   );
+}
 }
