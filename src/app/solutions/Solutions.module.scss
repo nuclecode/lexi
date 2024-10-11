@@ -1,24 +1,22 @@
 .solutions {
-  position: relative;
-  padding: 2rem;
-  text-align: center;
-
-  h1 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: #333;
-  }
-
-  .cardGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1rem;
-    padding: 0 2rem;
-
-    @media (max-width: 600px) {
-      grid-template-columns: 1fr;
+    position: relative;
+    padding: 2rem;
+    text-align: center;
+  
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: #333;
+    }
+  
+    .cardGrid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+      padding: 0 2rem;
+  
+      @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+      }
     }
   }
-}
-
-

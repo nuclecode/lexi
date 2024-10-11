@@ -7,9 +7,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: $footer-link;
+
+    color: $white;
     overflow: hidden;
-  
+    object-fit: cover;
+
+    color: $footer-link;
+    
     &__video {
       position: absolute;
       top: 0;

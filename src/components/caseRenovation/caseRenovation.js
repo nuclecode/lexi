@@ -60,6 +60,7 @@ const CaseRenovation = ({ orderText, beforePhoto, doneText, afterPhoto }) => {
             alt="Before renovation"
             width={500}
             height={300} />
+
         <div className={styles.overlayText}>{orderText}</div>
       </div>
 
@@ -80,6 +81,7 @@ const CaseRenovation = ({ orderText, beforePhoto, doneText, afterPhoto }) => {
             width={500}
             height={300}
         />
+
         <div className={styles.overlayText}>{doneText}</div>
       </div>
     </div>

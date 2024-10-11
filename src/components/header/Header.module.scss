@@ -1,0 +1,1664 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+// Define color variables
+$white: #FFFFFF;
+$light-yellow: #F8E370;
+$dark-yellow: #EFA92F;
+$light-brown: #75563C;
+$dark-brown: #4C3C2E;
+$light-grey: #ADADAD;
+$dark-grey: #848484;
+
+.header {
+  display: grid;
+  grid-template-columns: auto 1fr auto; // Align logo, nav menu, and call button
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;
+  background-color: rgba(117, 86, 60, 1);
+  transition: background-color 0.5s ease;
+  padding: 1rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+
+  &.transparent {
+    background-color: rgba(117, 86, 60, 0.2);
+    backdrop-filter: blur(10px);
+  }
+}
+
+.logoContainer {
+  cursor: pointer;
+  margin: auto 1rem;
+}
+
+.callButton {
+  background-color: $dark-brown;
+  width: 100px;
+  color: $white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: auto 20px;
+  font-size: 16px;
+  transition: background-color 0.5s ease;
+  animation: glow-button 4s ease-in-out infinite alternate;
+
+  &:hover {
+    background-color: $light-yellow;
+    color: $dark-brown;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.navStyles {
+  display: none; // Hidden by default on mobile
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  background-color: rgba(117, 86, 60, 0.9);
+  width: 100%;
+  text-align: right;
+  gap: 20px;
+}
+
+.showNav {
+  display: flex; // Show on mobile when burger menu is clicked
+  top: 120px;
+}
+
+.linkStyles {
+  color: $white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px 20px;
+  transition: color 0.3s ease;
+
+  &.active {
+    color: $dark-brown; // Active menu item color
+  }
+
+  &:hover {
+    color: $light-yellow;
+  }
+}
+
+.burgerMenu {
+  display: flex;
+  margin-left: auto;
+  cursor: pointer;
+  font-size: 30px;
+  color: $dark-brown;
+}
+
+// Desktop Styles
+@media (min-width: 768px) {
+
+  .header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 100;
+    background-color: rgba(117, 86, 60, 1);
+    transition: background-color 0.5s ease;
+    padding: 1rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+  
+    &.transparent {
+      background-color: rgba(117, 86, 60, 0.2);
+      backdrop-filter: blur(10px);
+    }
+  }
+  
+  
+.logoContainer {
+  cursor: pointer;
+  margin: auto 1rem;
+}
+
+
+  .navStyles {
+    display: flex; // Show menu on desktop
+    flex-direction: row;
+    position: static; // Reset to normal layout on desktop
+    gap: 20px;
+    background-color: transparent;
+    margin-left: auto;
+
+  }
+
+  .burgerMenu {
+    display: none; // Hide burger menu on desktop
+  }
+}
+
+.glow {
+  animation: glow 2s ease-in-out infinite alternate; // Glowing animation for the active item
+}
+
+
+.callButton {
+  background-color: $dark-brown;
+  width: 100px;
+  color: $white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: auto 20px;
+  font-size: 16px;
+  transition: background-color 0.5s ease;
+  animation: glow-button 4s ease-in-out infinite alternate;
+
+  &:hover {
+    background-color: $light-yellow;
+    color: $dark-brown;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+ 
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px $white, 0 0 20px $light-yellow, 0 0 30px $dark-yellow;
+  }
+  
+  to {
+    text-shadow: 0 0 20px $light-yellow, 0 0 30px $dark-yellow, 0 0 40px $dark-brown;
+  }
+}
+
+@keyframes glow-button {
+  0% {
+    background-color: $dark-brown;
+  }
+  100% {
+    background-color: $light-yellow;
+  }
+}
+
+
+
+//v12
+
+// @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+// // Define color variables
+// $white: #FFFFFF;
+// $light-yellow: #F8E370;
+// $dark-yellow: #EFA92F;
+// $light-brown: #75563C;
+// $dark-brown: #4C3C2E;
+// $light-grey: #ADADAD;
+// $dark-grey: #848484;
+
+// .header {
+//   display: grid;
+//   grid-template-columns: auto 1fr auto; // Align logo, nav menu, and call button
+//   align-items: center;
+//   position: fixed;
+//   top: 0;
+//   width: 100vw;
+//   z-index: 100;
+//   background-color: rgba(117, 86, 60, 1);
+//   transition: background-color 0.5s ease;
+//   padding: 1rem;
+//   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+//   backdrop-filter: blur(10px);
+
+//   &.transparent {
+//     background-color: rgba(117, 86, 60, 0.2);
+//     backdrop-filter: blur(10px);
+//     color: #4C3C2E;
+//   }
+// }
+
+// .logoContainer {
+//   cursor: pointer;
+//   margin: auto 1rem;
+// }
+
+// .callButton {
+//   background-color: $dark-brown;
+//   width: 100px;
+//   color: $white;
+//   padding: 10px 20px;
+//   border: none;
+//   border-radius: 5px;
+//   cursor: pointer;
+//   margin-left: 20px; // Space between call button and menu
+//   font-size: 16px;
+//   transition: background-color 0.5s ease;
+//   animation: glow-button 4s ease-in-out infinite alternate;
+
+//   &:hover {
+//     background-color: $light-yellow;
+//     color: $dark-brown;
+//   }
+
+//   &:focus {
+//     outline: none;
+//   }
+// }
+
+// .navStyles {
+//   display: none; // Hidden on mobile by default
+//   flex-direction: column;
+//   position: absolute;
+//   top: 60px;
+//   right: 10;
+//   background-color: rgba(117, 86, 60, 0.9);
+//   justify-content: flex-start;
+//   width: 100%;
+//   text-align: right;
+//   gap: 20px;
+
+//   a {
+//     padding: 10px 20px;
+//     font-size: 24px;
+//     color: $white;
+//     text-decoration: none;
+//     font-weight: bold;
+//     transition: color 0.3s ease;
+//   }
+
+//   &.showNav {
+//     display: flex; // Show menu on mobile when burger menu is open
+//   }
+// }
+
+// .linkStyles {
+//   position: relative;
+//   padding: 5px 10px;
+
+//   &.active {
+//     color: $dark-brown; // Active menu item color
+//   }
+
+//   &:hover {
+//     animation: glow 2s ease-in-out infinite alternate;
+//     color: $light-yellow;
+//   }
+// }
+
+// .burgerMenu {
+//   display: flex;
+//   margin-left: auto;
+//   cursor: pointer;
+//   font-size: 30px;
+//   color: $dark-brown;
+// }
+
+// // Glowing effect
+// .glow {
+//   animation: glow 1s ease-in-out infinite alternate;
+// }
+
+// @keyframes glow {
+//   from {
+//     text-shadow: 0 0 10px $light-yellow, 0 0 20px $light-yellow, 0 0 30px $dark-yellow;
+//   }
+//   to {
+//     text-shadow: 0 0 20px $light-yellow, 0 0 30px $dark-yellow, 0 0 40px $dark-yellow;
+//   }
+// }
+
+// @keyframes glow-button {
+//   0% {
+//     background-color: $dark-brown;
+//   }
+//   100% {
+//     background-color: $light-yellow;
+//   }
+// }
+
+// // Media query for larger screens (desktop)
+// @media (min-width: 768px) {
+//   .navStyles {
+//     display: flex; // Show menu on desktop
+//     justify-content: flex-start;
+//     gap: 20px;
+//     margin: auto 2rem;
+    
+//     a {
+//       padding: 10px 20px;
+//       font-size: 16px;
+//     }
+//   }
+
+//   .burgerMenu {
+//     display: none; // Hide burger menu on desktop
+//   }
+// }
+
+
+
+
+
+
+// // Define color variables
+// $white: #FFFFFF;
+// $light-yellow: #F8E370;
+// $dark-yellow: #EFA92F;
+// $light-brown: #75563C;
+// $dark-brown: #4C3C2E;
+// $light-grey: #ADADAD;
+// $dark-grey: #848484;
+
+// // .header {
+// //   max-width: 100%;
+// //   width: 100vw;
+// //   display: grid;
+// //   grid-template-columns: auto 1fr auto;
+// //   align-items: center;
+// //   padding: 1rem;
+// //   background-color: rgba(75, 60, 46, 0.9); /* Initial slightly transparent background */
+// //   backdrop-filter: blur(10px);
+// //   transition: background-color 0.5s ease;
+// //   position: fixed;
+// //   top: 0;
+// //   z-index: 1000;
+// // }
+
+// // .header.scrolled {
+// //   background-color: rgba(75, 60, 46, 0.6); /* More transparent when scrolled */
+// // }
+
+// // .logo {
+// //   margin-left: 1rem;
+// //   cursor: pointer;
+// // }
+
+// // .nav {
+// //   display: flex;
+// //   justify-content: space-between;
+// //   margin-left: 2rem;
+// // }
+
+// // .nav a {
+// //   padding: 1rem;
+// //   color: white;
+// //   text-decoration: none;
+// //   position: relative;
+// //   transition: color 0.3s ease;
+// // }
+
+// // /* Hover and active states */
+// // .nav a:hover, .nav a.active {
+// //   color: #F8E370; /* Light yellow for hover or active link */
+// // }
+
+// // /* Random glowing effect for the menu items */
+// // @keyframes glow {
+// //   from {
+// //     text-shadow: 0 0 10px #F8E370, 0 0 20px #F8E370;
+// //   }
+// //   to {
+// //     text-shadow: 0 0 20px #F8E370, 0 0 30px #F8E370;
+// //   }
+// // }
+
+// // /* Random glow logic */
+// // .nav a.random-glow {
+// //   animation: glow 1.5s ease-in-out infinite alternate;
+// // }
+
+// // /* Burger menu button (hidden on larger screens) */
+// // .burger-menu {
+// //   display: none;
+// // }
+
+// // .callButton {
+// //   white-space: nowrap;
+// //   padding: 0.5rem 1rem;
+// //   font-size: 1rem;
+// //   background-color: #4C3C2E; /* Dark brown */
+// //   color: white;
+// //   transition: all 0.5s ease;
+// //   animation: glowCallButton 3s ease-in-out infinite;
+// // }
+
+// // /* Call button animation */
+// // @keyframes glowCallButton {
+// //   0% {
+// //     background-color: #4C3C2E;
+// //     color: white;
+// //   }
+// //   100% {
+// //     background-color: #F8E370;
+// //     color: #4C3C2E;
+// //   }
+// // }
+
+// // /* For mobile screens */
+// // @media (max-width: 768px) {
+// //   .header {
+// //     grid-template-columns: auto auto; /* Logo and burger menu */
+// //     justify-content: space-between;
+// //   }
+
+// //   .nav {
+// //     display: none; /* Hide the nav on mobile */
+// //   }
+
+// //   .burger-menu {
+// //     display: block; /* Show burger menu icon on mobile */
+// //     margin-left: auto;
+// //     cursor: pointer;
+// //   }
+
+// //   .callButton {
+// //     position: absolute;
+// //     top: 1rem;
+// //     right: 1rem;
+// //     z-index: 10;
+// //   }
+// // }
+
+// // /* Show navigation items and hide burger menu when the burger is clicked */
+// // .show-nav .nav {
+// //   display: flex;
+// //   flex-direction: column;
+// //   position: absolute;
+// //   top: 60px; /* Position below the header */
+// //   right: 0;
+// //   background-color: #4C3C2E; /* Dark brown background */
+// //   width: 100%;
+// // }
+
+// // .show-nav .burger-menu {
+// //   display: none;
+// // }
+
+// // .show-nav .callButton {
+// //   z-index: 1001;
+// // }
+
+// // .header {
+// //   display: flex;
+// //   justify-content: space-between;
+// //   align-items: center;
+// //   padding: 10px 20px;
+// //   background-color: rgba(75, 60, 46, 0.8); // Semi-transparent brown header for scroll effect
+
+// //   /* For when the burger menu is open on mobile */
+// //   &.show-nav {
+// //     background-color: rgba(75, 60, 46, 0.95);
+// //   }
+// // }
+
+// // .logo {
+// //   font-size: 24px;
+// //   font-weight: bold;
+// //   color: #fff;
+// // }
+
+// // .nav {
+// //   display: flex;
+// //   gap: 20px;
+
+// //   a {
+// //     color: #fff;
+// //     text-decoration: none;
+// //     font-size: 18px;
+// //     position: relative;
+
+// //     &.random-glow {
+// //       animation: glow 1s ease-in-out infinite alternate;
+// //     }
+// //   }
+// // }
+
+// // /* Mobile-specific styles */
+// // .burger-menu {
+// //   display: block;
+// //   font-size: 30px;
+// //   color: #4C3C2E; /* Dark-brown burger menu icon */
+// //   cursor: pointer;
+
+// //   @media (min-width: 768px) {
+// //     display: none; /* Hide burger icon on larger screens */
+// //   }
+// // }
+
+// // .nav {
+// //   @media (max-width: 767px) {
+// //     display: none; /* Initially hide the menu on mobile */
+// //     flex-direction: column;
+// //     position: absolute;
+// //     top: 60px;
+// //     right: 0;
+// //     background-color: rgba(75, 60, 46, 0.9); /* Dark-brown background for mobile menu */
+// //     width: 100%;
+// //     text-align: right;
+// //     padding: 20px;
+
+// //     &.open {
+// //       display: flex; /* Show menu when burger is clicked */
+// //     }
+
+// //     a {
+// //       padding: 10px 20px;
+// //       font-size: 24px;
+// //     }
+// //   }
+// // }
+
+// // /* Always visible navigation on desktop */
+// // @media (min-width: 768px) {
+// //   .nav {
+// //     display: flex; /* Menu items always visible on desktop */
+// //   }
+// // }
+
+// // /* Glowing animation */
+// // @keyframes glow {
+// //   from {
+// //     text-shadow: 0 0 10px #fff, 0 0 20px $light-yellow, 0 0 30px $light-yellow;
+// //   }
+// //   to {
+// //     text-shadow: 0 0 20px #fff, 0 0 30px $light-yellow, 0 0 40px $light-yellow;
+// //   }
+// // }
+
+// // /* Call Us button styling */
+// // .callButton {
+// //   background-color: #4C3C2E; /* Dark-brown color */
+// //   color: #fff;
+// //   padding: 10px 20px;
+// //   border: none;
+// //   cursor: pointer;
+// //   animation: glow 2s ease-in-out infinite alternate;
+// // }
+
+
+
+// // // V6 
+// // @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+// // $white: #FFFFFF;
+// // $light-yellow: #F8E370;
+// // $dark-yellow: #EFA92F;
+// // $light-brown: #75563C;
+// // $dark-brown: #4C3C2E;
+
+// // .header {
+// //   display: grid;
+// //   grid-template-columns: auto 1fr auto;
+// //   align-items: center;
+// //   padding: 10px 20px;
+// //   background-color: rgba(117, 86, 60, 1);
+// //   transition: background-color 0.7s ease;
+// //   position: fixed;
+// //   width: 100%;
+// //   z-index: 100;
+// //   top: 0;
+// //   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+
+// //   &.transparent {
+// //     background-color: rgba(117, 86, 60, 0.7); // More transparent when scrolling
+// //     backdrop-filter: blur(10px);
+// //   }
+// // }
+
+// // .logo {
+// //   margin-right: 20px;
+// // }
+
+// // .nav {
+// //   display: flex;
+// //   justify-content: flex-start;
+// //   gap: 20px;
+
+// //   .link {
+// //     color: $white;
+// //     text-decoration: none;
+// //     font-weight: bold;
+// //     font-size: 16px;
+// //     padding: 10px;
+// //     transition: color 0.3s ease;
+// //     position: relative;
+
+// //     &:hover {
+// //       color: $light-yellow;
+// //     }
+
+// //     &.active {
+// //       color: $dark-brown;
+// //     }
+// //   }
+// // }
+
+// // .callButton {
+// //   background-color: $dark-brown;
+// //   color: $white;
+// //   padding: 10px 20px;
+// //   border: none;
+// //   cursor: pointer;
+// //   border-radius: 5px;
+// //   font-size: 16px;
+// //   transition: background-color 0.5s ease;
+// //   animation: glow-button 2s ease-in-out infinite alternate;
+
+// //   &:hover {
+// //     background-color: $light-yellow;
+// //     color: $dark-brown;
+// //   }
+
+// //   &:focus {
+// //     outline: none;
+// //   }
+// // }
+
+// // @keyframes glow-button {
+// //   0% {
+// //     background-color: $dark-brown;
+// //   }
+// //   100% {
+// //     background-color: $light-yellow;
+// //   }
+// // }
+
+// // @media (max-width: 768px) {
+// //   .nav {
+// //     display: none;
+// //   }
+
+// //   .burger {
+// //     display: block;
+// //   }
+// // }
+
+
+
+// // // // V5 GOOD_5 MENU ITEMS GLOW AND DEFINE A PAGE - this is working model
+
+// // @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+// // // Define color variables
+// // $white: #FFFFFF;
+// // $light-yellow: #F8E370;
+// // $dark-yellow: #EFA92F;
+// // $light-brown: #75563C;
+// // $dark-brown: #4C3C2E;
+// // $light-grey: #ADADAD;
+// // $dark-grey: #848484;
+
+// // .header {
+// //   // max-width: 100%;
+
+// //   display: grid;
+// //   grid-template-columns: auto 1fr auto; // Align logo, nav menu, and call button
+// //   align-items: center;
+// //   position: fixed;
+// //   top: 0;
+// //   width: 100vw;
+// //   z-index: 100;
+// //   background-color: rgba(117, 86, 60, 1);
+// //   transition: background-color 0.5s ease;
+// //   padding: 1rem;
+// //   // padding: 10px 20px;
+// //   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+// //   backdrop-filter: blur(10px);
+
+
+// //   &.transparent {
+// //     background-color: rgba(117, 86, 60, 0.2);
+// //     backdrop-filter: blur(10px);
+
+// //   }
+// // }
+
+// // .logoContainer {
+// //   cursor: pointer;
+// //   // margin-right: 20px;
+// //   margin: auto 1rem;
+
+// // }
+
+// // .callButton {
+// //   background-color: $dark-brown;
+// //   width: 100px;
+// //   color: $white;
+// //   padding: 10px 20px;
+// //   border: none;
+// //   border-radius: 5px;
+// //   cursor: pointer;
+// //   margin-left: 20px; // Space between call button and menu
+// //   font-size: 16px;
+// //   transition: background-color 0.5s ease;
+// //   animation: glow-button 4s ease-in-out infinite alternate;
+
+// //   &:hover {
+// //     background-color: $light-yellow;
+// //     color: $dark-brown;
+// //   }
+
+// //   &:focus {
+// //     outline: none;
+// //   }
+// // }
+
+// // .navStyles {
+// //   display: none;
+// //   display: flex; 
+// //   flex-direction: column;
+// //   position: absolute;
+// //   top: 60px;
+// //   right: 10;
+// //   background-color: rgba(117, 86, 60, 0.9);
+// //   justify-content: flex-start;
+// //   width: 100%;
+// //   text-align: right;
+// //   gap: 20px;
+// //   margin-left: 2rem; // Space 20px between nav items and logo
+
+// //   &.open {
+// //     display: flex;
+// //   }
+
+// //   a {
+// //     padding: 10px 20px;
+// //     font-size: 24px;
+// //   }
+// // }
+
+// // .linkStyles {
+// //   display: none;
+// // }
+
+
+// // .linkStyles {
+// //   color: $white;
+// //   text-decoration: none;
+// //   font-weight: bold;
+// //   font-size: 16px;
+// //   position: relative;
+// //   padding: 5px 10px;
+// //   transition: color 0.3s ease;
+
+// //   &.active {
+// //     color: $dark-brown; // Active menu item color
+// //   }
+
+// //   &:hover {
+// //     animation: glow 1s ease-in-out infinite alternate;
+// //     color: $light-yellow;
+
+// //   }
+// // }
+
+// // .burger-menu {
+// //   display: flex;
+// //   margin-left: auto;
+// //   cursor: pointer;
+// //   font-size: 30px;
+// //   color:#4C3C2E;
+// // }
+
+// // .show-nav {
+// //   display: flex;
+// //   flex-direction: column;
+// //   position: absolute;
+// //   top: 60px;
+// //   right: 0;
+// //   background-color: #4C3C2E;
+// //   width: 100%;
+// //   z-index: 1001;
+// // }
+
+// // .glow {
+// //   animation: glow 1s ease-in-out infinite alternate; // Glowing animation for the active item
+// // }
+
+// // @keyframes glow {
+// //   from {
+// //     text-shadow: 0 0 10px $light-yellow, 0 0 20px $light-yellow, 0 0 30px $dark-yellow;
+// //   }
+  
+// //   to {
+// //     text-shadow: 0 0 20px $light-yellow, 0 0 30px $dark-yellow, 0 0 40px $dark-yellow;
+// //   }
+// // }
+
+
+// // @keyframes glow-button {
+// //   0% {
+// //     background-color: $dark-brown;
+// //   }
+// //   100% {
+// //     background-color: $light-yellow;
+// //   }
+// // }
+
+
+// // // Media query 
+// // @media (min-width: 768px) {
+// //   .navStyles {
+// //     display: flex; // Show menu on desktop
+// //     justify-content: flex-start;
+// //     gap: 20px;
+// //     margin: auto 2rem; 
+
+
+// //     &.open {
+// //       display: flex;
+// //     }
+  
+// //     a {
+// //       padding: 10px 20px;
+// //       font-size: 16px;
+// //     }
+  
+
+  
+
+// //   .show-nav {
+// //     display: none;
+// //   }
+
+// //   .burger-menu {
+// //     display: none; 
+// //   }
+// // }
+// // }
+
+// // // V4
+// // // Define color variables
+// // $white: #FFFFFF;
+// // $light-yellow: #F8E370;
+// // $dark-yellow: #EFA92F;
+// // $light-brown: #75563C;
+// // $dark-brown: #4C3C2E;
+// // $light-grey: #ADADAD;
+// // $dark-grey: #848484;
+
+// // .header {
+// //   display: grid;
+// //   grid-template-columns: 1fr auto; // Logo and nav menu with call button on the right
+// //   align-items: center;
+// //   position: fixed;
+// //   top: 0;
+// //   width: 100%;
+// //   z-index: 100;
+// //   background-color: rgba(117, 86, 60, 0.7);
+// //   transition: background-color 0.5s ease;
+// //   padding: 10px 20px;
+
+// //   &.transparent {
+// //     background-color: rgba(117, 86, 60, 0.2);
+// //   }
+// // }
+
+// // .logoContainer {
+// //   cursor: pointer;
+// // }
+
+// // .callButton {
+// //   background-color: $dark-yellow;
+// //   color: $white;
+// //   padding: 10px 15px;
+// //   border-radius: 5px;
+// //   cursor: pointer;
+// //   margin-left: auto; // Align to the right
+
+// //   &:hover {
+// //     background-color: $light-yellow;
+// //   }
+// // }
+
+// // .navStyles {
+// //   display: flex; // Show menu on desktop
+// //   gap: 20px;
+// //   margin-left: 20px; // Space between nav items and logo
+// // }
+
+// // .linkStyles {
+// //   color: $white;
+// //   text-decoration: none;
+// //   font-weight: bold;
+// //   font-size: 16px;
+// //   position: relative;
+// //   padding: 5px 10px;
+// //   transition: color 0.3s ease;
+
+// //   &.active {
+// //     color: $dark-brown; // Active menu item color
+// //   }
+
+// //   &:hover {
+// //     animation: glow 1s ease-in-out infinite alternate;
+// //   }
+// // }
+
+// // .glow {
+// //   animation: glow 1s ease-in-out infinite alternate; // Glowing animation for the active item
+// // }
+
+// // @keyframes glow {
+// //   from {
+// //     text-shadow: 0 0 10px $light-yellow, 0 0 20px $light-yellow, 0 0 30px $dark-yellow;
+// //   }
+  
+// //   to {
+// //     text-shadow: 0 0 20px $light-yellow, 0 0 30px $dark-yellow, 0 0 40px $dark-yellow;
+// //   }
+// // }
+
+// // // Media query for mobile
+// // @media (max-width: 768px) {
+// //   .navStyles {
+// //     display: none; // Hide navigation on mobile
+// //   }
+
+// //   .burger {
+// //     display: flex; // Show burger icon on mobile
+// //   }
+// // }
+
+
+
+
+// // V3
+// // // Define color variables
+// // $white: #FFFFFF;
+// // $light-yellow: #F8E370;
+// // $dark-yellow: #EFA92F;
+// // $light-brown: #75563C;
+// // $dark-brown: #4C3C2E;
+// // $light-grey: #ADADAD;
+// // $dark-grey: #848484;
+
+// // .header {
+// //   display: grid;
+// //   grid-template-columns: 1fr auto auto; // Adjust the layout for logo, call button, and burger menu
+// //   align-items: center;
+// //   position: fixed;
+// //   top: 0;
+// //   width: 100%;
+// //   z-index: 100;
+// //   background-color: rgba(117, 86, 60, 0.7);
+// //   transition: background-color 0.5s ease;
+// //   padding: 10px 20px;
+
+// //   &.transparent {
+// //     background-color: rgba(117, 86, 60, 0.2);
+// //   }
+// // }
+
+// // .logoContainer {
+// //   cursor: pointer;
+// // }
+
+// // .callButton {
+// //   background-color: $dark-yellow;
+// //   color: $white;
+// //   padding: 10px 15px;
+// //   border-radius: 5px;
+// //   cursor: pointer;
+// //   margin-left: auto; // Align to the right
+
+// //   &:hover {
+// //     background-color: $light-yellow;
+// //   }
+// // }
+
+// // .burger {
+// //   display: none; // Hidden by default
+// //   flex-direction: column;
+// //   cursor: pointer;
+
+// //   .burgerLine {
+// //     width: 25px;
+// //     height: 3px;
+// //     background-color: $white;
+// //     margin: 4px 0;
+// //     transition: all 0.3s ease;
+// //   }
+// // }
+
+// // .navStyles {
+// //   display: flex; // Show menu on desktop
+// //   gap: 20px;
+// //   margin-left: auto; // Align to the right
+// //   transition: max-height 0.3s ease;
+  
+// //   // Hide the menu by default for mobile view
+// //   @media (max-width: 768px) {
+// //     display: none; // Hide navigation on mobile
+// //   }
+
+// //   &.open {
+// //     display: flex; // Show on mobile when open
+// //   }
+// // }
+
+// // .linkStyles {
+// //   color: $white;
+// //   text-decoration: none;
+// //   font-weight: bold;
+// //   font-size: 16px;
+// //   position: relative;
+// //   padding: 5px 10px;
+// //   transition: color 0.3s ease;
+
+// //   &.active {
+// //     color: $dark-brown; // Active menu item color
+// //   }
+
+// //   &:hover {
+// //     animation: glow 1s ease-in-out infinite alternate;
+// //   }
+// // }
+
+// // @keyframes glow {
+// //   from {
+// //     text-shadow: 0 0 10px $light-yellow, 0 0 20px $light-yellow, 0 0 30px $dark-yellow;
+// //   }
+  
+// //   to {
+// //     text-shadow: 0 0 20px $light-yellow, 0 0 30px $dark-yellow, 0 0 40px $dark-yellow;
+// //   }
+// // }
+
+// // // Media query for mobile
+// // @media (max-width: 768px) {
+// //   .navStyles {
+// //     display: none; // Hide navigation on mobile
+// //   }
+
+// //   .burger {
+// //     display: flex; // Show burger icon on mobile
+// //   }
+// // }
+
+
+
+
+// // // GOOD_1 TRANSPARENT 
+// // // Define color variables
+// // $white: #FFFFFF;
+// // $light-yellow: #F8E370;
+// // $dark-yellow: #EFA92F;
+// // $light-brown: #75563C;
+// // $dark-brown: #4C3C2E;
+// // $light-grey: #ADADAD;
+// // $dark-grey: #848484;
+
+// // .header {
+// //   display: grid;
+// //   grid-template-columns: 1fr auto auto; // Adjust the layout for logo, call button, and burger menu
+// //   align-items: center;
+// //   position: fixed;
+// //   top: 0;
+// //   width: 100%;
+// //   z-index: 100;
+// //   background-color: rgba(117, 86, 60, 0.7);
+// //   transition: background-color 0.5s ease;
+// //   padding: 10px 20px;
+
+// //   &.transparent {
+// //     background-color: rgba(117, 86, 60, 0.2);
+// //   }
+// // }
+
+// // .logoContainer {
+// //   cursor: pointer;
+// // }
+
+// // .callButton {
+// //   background-color: $dark-yellow;
+// //   color: $white;
+// //   padding: 10px 15px;
+// //   border-radius: 5px;
+// //   cursor: pointer;
+// //   margin-left: auto; // Align to the right
+
+// //   &:hover {
+// //     background-color: $light-yellow;
+// //   }
+// // }
+
+// // .burger {
+// //   display: none; // Hidden by default
+// //   flex-direction: column;
+// //   cursor: pointer;
+
+// //   .burgerLine {
+// //     width: 25px;
+// //     height: 3px;
+// //     background-color: $white;
+// //     margin: 4px 0;
+// //     transition: all 0.3s ease;
+// //   }
+// // }
+
+// // .navStyles {
+// //   display: flex;
+// //   gap: 20px;
+// //   margin-left: auto; // Align to the right
+// //   transition: max-height 0.3s ease;
+// //   max-height: 0; // Initially hidden
+// //   overflow: hidden;
+
+// //   &.open {
+// //     max-height: 300px; // Adjust according to your menu
+// //   }
+// // }
+
+// // .linkStyles {
+// //   color: $white;
+// //   text-decoration: none;
+// //   font-weight: bold;
+// //   font-size: 16px;
+// //   position: relative;
+// //   padding: 5px 10px;
+// //   transition: color 0.3s ease;
+
+// //   &.active {
+// //     color: $dark-brown; // Active menu item color
+// //   }
+
+// //   &:hover {
+// //     animation: glow 1s ease-in-out infinite alternate;
+// //   }
+// // }
+
+// // @keyframes glow {
+// //   from {
+// //     text-shadow: 0 0 10px $light-yellow, 0 0 20px $light-yellow, 0 0 30px $dark-yellow;
+// //   }
+  
+// //   to {
+// //     text-shadow: 0 0 20px $light-yellow, 0 0 30px $dark-yellow, 0 0 40px $dark-yellow;
+// //   }
+// // }
+
+// // // Media query for mobile
+// // @media (max-width: 768px) {
+// //   .navStyles {
+// //     display: none; // Hide navigation on mobile
+// //   }
+
+// //   .burger {
+// //     display: flex; // Show burger icon on mobile
+// //   }
+// // }
+
+
+
+
+// // // Color variables
+// // $white: #FFFFFF;
+// // $light-yellow: #F8E370;
+// // $dark-yellow: #EFA92F;
+// // $light-brown: #75563C;
+// // $dark-brown: #4C3C2E;
+// // $light-grey: #ADADAD;
+// // $dark-grey: #848484;
+
+// // .header {
+// //     position: fixed;
+// //     top: 0;
+// //     width: 100%;
+// //     z-index: 100;
+// //     background-color: rgba(117, 86, 60, 0.9); // Start more transparent
+// //     transition: background-color 0.7s ease, backdrop-filter 0.7s ease;
+// //     display: grid;
+// //     grid-template-columns: 1fr auto; // Logo on the left, nav and button on the right
+// //     align-items: center;
+// //     padding: 10px 20px;
+// //     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+// //     color: $white; // White
+
+// //     &.transparent {
+// //         background-color: rgba(117, 86, 60, 0.5); // More transparent when scrolling
+// //         backdrop-filter: blur(10px);
+// //     }
+
+// //     .logoContainer {
+// //         cursor: pointer; // To indicate it's clickable
+// //     }
+
+// //     .navStyles {
+// //         display: flex;
+// //         gap: 20px;
+// //         margin-right: 20px; // Space between nav and button
+// //     }
+
+// //     .linkStyles {
+// //         color: $white; // White
+// //         text-decoration: none;
+// //         font-weight: bold;
+// //         font-size: 16px;
+// //         position: relative; // Position for the glow effect
+
+// //         &.active {
+// //             color: $dark-brown; // Dark brown for active link
+// //         }
+
+// //         &::after {
+// //             content: '';
+// //             position: absolute;
+// //             left: 0;
+// //             right: 0;
+// //             bottom: -2px;
+// //             height: 2px;
+// //             background: $light-yellow;
+// //             transform: scaleX(0);
+// //             transition: transform 0.5s ease;
+// //             z-index: -1; // Behind the text
+// //         }
+
+// //         &:hover::after {
+// //             transform: scaleX(1); // Animation on hover
+// //         }
+
+// //         &.glow {
+// //             animation: glow 1s ease-in-out infinite alternate; // Apply glow effect
+// //         }
+// //     }
+
+// //     .callButton {
+// //         background-color: $dark-yellow; // Button color
+// //         color: $white; // Text color
+// //         border: none;
+// //         border-radius: 5px;
+// //         padding: 10px 20px;
+// //         cursor: pointer;
+// //         font-weight: bold;
+// //         transition: background-color 0.3s ease; // For smooth color change
+
+// //         &:hover {
+// //             background-color: $light-yellow; // Change on hover
+// //             animation: glow 1s ease-in-out infinite alternate; // Glow on hover
+// //         }
+// //     }
+// // }
+
+// // @keyframes glow {
+// //     from {
+// //         text-shadow: 0 0 10px $white, 0 0 20px $white, 0 0 30px $light-yellow, 0 0 40px $light-yellow, 0 0 50px $light-yellow, 0 0 60px $light-yellow, 0 0 70px $light-yellow;
+// //     }
+
+// //     to {
+// //         text-shadow: 0 0 20px $white, 0 0 30px $dark-yellow, 0 0 40px $dark-yellow, 0 0 50px $dark-yellow, 0 0 60px $dark-yellow, 0 0 70px $dark-yellow, 0 0 80px $dark-yellow;
+// //     }
+// // }
+
+
+
+
+// // // // // // // // // Color variables
+// // // // // // // // $white: #FFFFFF;
+// // // // // // // // $light-yellow: #F8E370;
+// // // // // // // // $dark-yellow: #EFA92F;
+// // // // // // // // $light-brown: #75563C;
+// // // // // // // // $dark-brown: #4C3C2E;
+// // // // // // // // $light-grey: #ADADAD;
+// // // // // // // // $dark-grey: #848484;
+
+// // // // // // // // .header {
+// // // // // // // //     position: fixed;
+// // // // // // // //     top: 0;
+// // // // // // // //     width: 100%;
+// // // // // // // //     z-index: 100;
+// // // // // // // //     background-color: rgba(117, 86, 60, 1);
+// // // // // // // //     transition: background-color 0.7s ease, backdrop-filter 0.7s ease;
+// // // // // // // //     display: flex;
+// // // // // // // //     flex-flow: row;
+// // // // // // // //     justify-content: space-between;
+// // // // // // // //     align-items: center;
+// // // // // // // //     padding: 10px 20px;
+// // // // // // // //     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+// // // // // // // //     color: $white; // White
+
+// // // // // // // //     &.transparent {
+// // // // // // // //         background-color: rgba(117, 86, 60, 0.7);
+// // // // // // // //         backdrop-filter: blur(10px);
+// // // // // // // //         color: $dark-yellow; // Yellow for scrolling
+// // // // // // // //     }
+
+// // // // // // // //     .logoContainer {
+// // // // // // // //         display: flex;
+// // // // // // // //         align-items: center;
+// // // // // // // //         cursor: pointer; // To indicate it's clickable
+// // // // // // // //     }
+
+// // // // // // // //     .navStyles {
+// // // // // // // //         display: flex;
+// // // // // // // //         flex: 1;
+// // // // // // // //         justify-content: space-between;
+// // // // // // // //         gap: 20px;
+// // // // // // // //     }
+
+// // // // // // // //     .linkStyles {
+// // // // // // // //         color: $white; // White
+// // // // // // // //         text-decoration: none;
+// // // // // // // //         font-weight: bold;
+// // // // // // // //         font-size: 16px;
+// // // // // // // //         transition: color 0.3s ease; // For smooth color change
+
+// // // // // // // //         &.active {
+// // // // // // // //             color: $dark-brown; // Dark brown for active link
+// // // // // // // //         }
+
+// // // // // // // //         &:hover {
+// // // // // // // //             color: $light-yellow; // Light yellow on hover
+// // // // // // // //         }
+// // // // // // // //     }
+
+// // // // // // // //     .callButton {
+// // // // // // // //         background-color: $dark-yellow; // Button color
+// // // // // // // //         color: $white; // Text color
+// // // // // // // //         border: none;
+// // // // // // // //         border-radius: 5px;
+// // // // // // // //         padding: 10px 20px;
+// // // // // // // //         cursor: pointer;
+// // // // // // // //         font-weight: bold;
+// // // // // // // //         transition: background-color 0.3s ease; // For smooth color change
+
+// // // // // // // //         &:hover {
+// // // // // // // //             background-color: $light-yellow; // Change on hover
+// // // // // // // //         }
+// // // // // // // //     }
+// // // // // // // // }
+
+
+
+
+// // // // // // // // // // Color variables
+// // // // // // // // // $white: #FFFFFF;
+// // // // // // // // // $light-yellow: #F8E370;
+// // // // // // // // // $dark-yellow: #EFA92F;
+// // // // // // // // // $light-brown: #75563C;
+// // // // // // // // // $dark-brown: #4C3C2E;
+// // // // // // // // // $light-grey: #ADADAD;
+// // // // // // // // // $dark-grey: #848484;
+
+// // // // // // // // // .header {
+// // // // // // // // //     position: fixed;
+// // // // // // // // //     top: 0;
+// // // // // // // // //     width: 100%;
+// // // // // // // // //     z-index: 100;
+// // // // // // // // //     background-color: rgba(117, 86, 60, 1);
+// // // // // // // // //     transition: background-color 0.7s ease, backdrop-filter 0.7s ease;
+// // // // // // // // //     display: flex;
+// // // // // // // // //     flex-flow: row;
+// // // // // // // // //     justify-content: space-between;
+// // // // // // // // //     align-items: center;
+// // // // // // // // //     padding: 10px 20px;
+// // // // // // // // //     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+// // // // // // // // //     color: $white; // White
+
+// // // // // // // // //     &.transparent {
+// // // // // // // // //         background-color: rgba(117, 86, 60, 0.7);
+// // // // // // // // //         backdrop-filter: blur(10px);
+// // // // // // // // //         color: $dark-yellow; // Yellow for scrolling
+// // // // // // // // //     }
+
+// // // // // // // // //     .logoContainer {
+// // // // // // // // //         display: flex;
+// // // // // // // // //         align-items: center;
+// // // // // // // // //         cursor: pointer; // To indicate it's clickable
+// // // // // // // // //     }
+
+// // // // // // // // //     .navStyles {
+// // // // // // // // //         display: flex;
+// // // // // // // // //         flex: 1;
+// // // // // // // // //         justify-content: space-between;
+// // // // // // // // //         gap: 20px;
+// // // // // // // // //     }
+
+// // // // // // // // //     .linkStyles {
+// // // // // // // // //         color: $white; // White
+// // // // // // // // //         text-decoration: none;
+// // // // // // // // //         font-weight: bold;
+// // // // // // // // //         font-size: 16px;
+// // // // // // // // //         transition: color 0.3s ease; // For smooth color change
+
+// // // // // // // // //         &.active {
+// // // // // // // // //             color: $dark-brown; // Dark brown for active link
+// // // // // // // // //         }
+
+// // // // // // // // //         &:hover {
+// // // // // // // // //             color: $light-yellow; // Light yellow on hover
+// // // // // // // // //         }
+// // // // // // // // //     }
+// // // // // // // // // }
+
+
+
+
+// // // // // // // // // // // Define color variables
+// // // // // // // // // // $white: #FFFFFF;
+// // // // // // // // // // $light-yellow: #F8E370;
+// // // // // // // // // // $dark-yellow: #EFA92F;
+// // // // // // // // // // $light-brown: #75563C;
+// // // // // // // // // // $dark-brown: #4C3C2E;
+// // // // // // // // // // $light-grey: #ADADAD;
+// // // // // // // // // // $dark-grey: #848484;
+
+// // // // // // // // // // .header {
+// // // // // // // // // //     position: fixed;
+// // // // // // // // // //     top: 0;
+// // // // // // // // // //     width: 100%;
+// // // // // // // // // //     z-index: 100;
+// // // // // // // // // //     background-color: rgba(117, 86, 60, 1);
+// // // // // // // // // //     transition: background-color 0.7s ease;
+// // // // // // // // // //     display: flex;
+// // // // // // // // // //     flex-direction: column; // Stack items vertically for mobile
+// // // // // // // // // //     align-items: center;
+// // // // // // // // // //     padding: 10px 20px;
+// // // // // // // // // //     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+// // // // // // // // // //     color: $white;
+
+// // // // // // // // // //     &.transparent {
+// // // // // // // // // //         background-color: rgba(117, 86, 60, 0.5); // Add blur effect
+// // // // // // // // // //         backdrop-filter: blur(5px); // Optional blur
+// // // // // // // // // //         color: $dark-yellow;
+
+// // // // // // // // // //         .linkStyles {
+// // // // // // // // // //             color: $dark-yellow; // Change color to dark yellow when transparent
+// // // // // // // // // //         }
+// // // // // // // // // //     }
+
+// // // // // // // // // //     .logoContainer {
+// // // // // // // // // //         cursor: pointer; // Change cursor on hover
+// // // // // // // // // //         margin-bottom: 10px; // Spacing for mobile
+// // // // // // // // // //     }
+
+// // // // // // // // // //     .navStyles {
+// // // // // // // // // //         display: flex;
+// // // // // // // // // //         flex-direction: column; // Stack nav items vertically for mobile
+// // // // // // // // // //         gap: 10px; // Spacing between items
+
+// // // // // // // // // //         .linkStyles {
+// // // // // // // // // //             color: $white; // White
+// // // // // // // // // //             text-decoration: none;
+// // // // // // // // // //             font-weight: bold;
+// // // // // // // // // //             font-size: 16px;
+// // // // // // // // // //             margin: 8px;
+
+// // // // // // // // // //             &:hover {
+// // // // // // // // // //                 color: $light-yellow; // Light yellow on hover
+// // // // // // // // // //             }
+// // // // // // // // // //         }
+
+// // // // // // // // // //         .active {
+// // // // // // // // // //             color: $dark-brown; // Dark brown for active page
+// // // // // // // // // //         }
+// // // // // // // // // //     }
+
+// // // // // // // // // //     .callButton {
+// // // // // // // // // //         background-color: $light-yellow; // Light yellow
+// // // // // // // // // //         color: $dark-brown; // Dark brown text
+// // // // // // // // // //         border: none;
+// // // // // // // // // //         border-radius: 5px;
+// // // // // // // // // //         padding: 10px 20px;
+// // // // // // // // // //         cursor: pointer;
+// // // // // // // // // //         font-weight: bold;
+// // // // // // // // // //         margin-top: 10px; // Spacing above the button
+
+// // // // // // // // // //         &:hover {
+// // // // // // // // // //             background-color: $dark-yellow; // Dark yellow on hover
+// // // // // // // // // //         }
+// // // // // // // // // //     }
+
+// // // // // // // // // //     // Styles for larger screens
+// // // // // // // // // //     @media (min-width: 768px) {
+// // // // // // // // // //         flex-direction: row; // Stack items horizontally for larger screens
+// // // // // // // // // //         justify-content: space-between;
+// // // // // // // // // //         padding: 10px 50px;
+
+// // // // // // // // // //         .navStyles {
+// // // // // // // // // //             flex-direction: row; // Horizontal layout for nav items
+// // // // // // // // // //             gap: 20px; // Spacing between items
+// // // // // // // // // //         }
+// // // // // // // // // //     }
+// // // // // // // // // // }
+
+
+
+// // // // // // // // // // // // Define color variables
+// // // // // // // // // // // $white: #FFFFFF;
+// // // // // // // // // // // $light-yellow: #F8E370;
+// // // // // // // // // // // $dark-yellow: #EFA92F;
+// // // // // // // // // // // $light-brown: #75563C;
+// // // // // // // // // // // $dark-brown: #4C3C2E;
+// // // // // // // // // // // $light-grey: #ADADAD;
+// // // // // // // // // // // $dark-grey: #848484;
+
+// // // // // // // // // // // .header {
+// // // // // // // // // // //     position: fixed;
+// // // // // // // // // // //     top: 0;
+// // // // // // // // // // //     width: 100%;
+// // // // // // // // // // //     z-index: 100;
+// // // // // // // // // // //     background-color: rgba(117, 86, 60, 1);
+// // // // // // // // // // //     transition: background-color 0.7s ease;
+// // // // // // // // // // //     display: flex;
+// // // // // // // // // // //     flex-flow: row;
+// // // // // // // // // // //     justify-content: space-between;
+// // // // // // // // // // //     align-items: center;
+// // // // // // // // // // //     padding: 10px 50px;
+// // // // // // // // // // //     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+// // // // // // // // // // //     color: $white; // White
+
+// // // // // // // // // // //     &.transparent {
+// // // // // // // // // // //         background-color: rgba(117, 86, 60, 0.5); // Add blur effect
+// // // // // // // // // // //         backdrop-filter: blur(5px); // Optional blur
+// // // // // // // // // // //         color: $dark-yellow;
+
+// // // // // // // // // // //         .linkStyles {
+// // // // // // // // // // //             color: $dark-yellow; // Change color to dark yellow when transparent
+// // // // // // // // // // //         }
+// // // // // // // // // // //     }
+// // // // // // // // // // // }
+
+// // // // // // // // // // // .logoContainer {
+// // // // // // // // // // //     display: flex;
+// // // // // // // // // // //     align-items: center;
+// // // // // // // // // // //     cursor: pointer; // Change cursor on hover
+// // // // // // // // // // // }
+
+// // // // // // // // // // // .navStyles {
+// // // // // // // // // // //     display: flex;
+// // // // // // // // // // //     flex: 1;
+// // // // // // // // // // //     justify-content: space-between;
+// // // // // // // // // // //     gap: 20px;
+// // // // // // // // // // //     color: $white; // White
+
+// // // // // // // // // // //     .linkStyles {
+// // // // // // // // // // //         color: $white; // White
+// // // // // // // // // // //         text-decoration: none;
+// // // // // // // // // // //         font-weight: bold;
+// // // // // // // // // // //         font-size: 16px;
+// // // // // // // // // // //         margin: 8px;
+
+// // // // // // // // // // //         &:hover {
+// // // // // // // // // // //             color: $light-yellow; // Light yellow on hover
+// // // // // // // // // // //         }
+// // // // // // // // // // //     }
+
+// // // // // // // // // // //     .active {
+// // // // // // // // // // //         color: $dark-brown; // Dark brown for active page
+// // // // // // // // // // //     }
+// // // // // // // // // // // }
+
+// // // // // // // // // // // .callButton {
+// // // // // // // // // // //     background-color: $light-yellow; // Light yellow
+// // // // // // // // // // //     color: $dark-brown; // Dark brown text
+// // // // // // // // // // //     border: none;
+// // // // // // // // // // //     border-radius: 5px;
+// // // // // // // // // // //     padding: 10px 20px;
+// // // // // // // // // // //     cursor: pointer;
+// // // // // // // // // // //     font-weight: bold;
+
+// // // // // // // // // // //     &:hover {
+// // // // // // // // // // //         background-color: $dark-yellow; // Dark yellow on hover
+// // // // // // // // // // //     }
+// // // // // // // // // // // }
+
+
+
+// // // // // // // // // // // // .header {
+// // // // // // // // // // // //     position: fixed;
+// // // // // // // // // // // //     top: 0;
+// // // // // // // // // // // //     width: 100%;
+// // // // // // // // // // // //     z-index: 100;
+// // // // // // // // // // // //     background-color: rgba(117, 86, 60, 1);
+// // // // // // // // // // // //     transition: background-color 0.7s ease;
+// // // // // // // // // // // //     display: 'flex';
+// // // // // // // // // // // //     flex-flow: row;
+// // // // // // // // // // // //     justify-content: 'space-between';
+// // // // // // // // // // // //     align-items: 'center';
+// // // // // // // // // // // //     padding: '10px 50px';
+// // // // // // // // // // // //     box-shadow: '0px 4px 6px rgba(0, 0, 0, 0.2)';
+// // // // // // // // // // // //     color: '#FFFFFF'; // White
+
+
+    
+// // // // // // // // // // // //     &.transparent {
+// // // // // // // // // // // //         background-color: rgba(117, 86, 60, 0);
+// // // // // // // // // // // //         color: rgb(239, 169, 47);
+// // // // // // // // // // // //     };
+
+    
+
+// // // // // // // // // // // //   .logoContainer  {
+// // // // // // // // // // // //   display: 'flex';
+// // // // // // // // // // // //   align-items: 'center';
+// // // // // // // // // // // // };
+
+// // // // // // // // // // // // .navStyles {
+// // // // // // // // // // // //   display: 'flex';
+// // // // // // // // // // // //   flex: 1;
+// // // // // // // // // // // //   justify-content: space-between;
+// // // // // // // // // // // //   gap: '20px';
+// // // // // // // // // // // //   color: '#FFFFFF'; // White
+// // // // // // // // // // // // };
+
+// // // // // // // // // // // // .linkStyles {
+// // // // // // // // // // // //   color: '#FFFFFF'; // White
+// // // // // // // // // // // //   text-decoration: 'none';
+// // // // // // // // // // // //   font-weight: 'bold';
+// // // // // // // // // // // //   font-size: '16px';
+// // // // // // // // // // // //   margin: 8px;
+// // // // // // // // // // // // };
+
+// // // // // // // // // // // // }
