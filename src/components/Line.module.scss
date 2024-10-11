@@ -1,26 +1,20 @@
-// Line.module.scss
-
 .line {
-    position: absolute;
-    height: 2px; /* Adjust line thickness */
-    background: none;
-    border: 2px dashed #2980b9; /* Dashed line */
-    border-radius: 10px; /* Rounded corners to give a smoother look */
-    animation: dashMove 4s linear infinite; /* Infinite animation */
-  
-    /*
-       Control the length of the dash and space.
-       It makes the dashes flow as if it’s a moving pipeline.
-    */
-    border-image: repeating-linear-gradient(90deg, #2980b9 0, #2980b9 10px, transparent 10px, transparent 20px) 1;
+  position: absolute;
+  height: 2px; 
+  background: none;
+  border: 2px dashed #2980b9; 
+  border-radius: 10px; 
+  animation: dashMove 4s linear infinite; 
+
+   border-image: repeating-linear-gradient(90deg, #2980b9 0, #2980b9 10px, transparent 10px, transparent 20px) 1;
+}
+
+
+@keyframes dashMove {
+  0% {
+    border-image-position: 0;
   }
-  
-  /* Keyframes to make the dashes move horizontally */
-  @keyframes dashMove {
-    0% {
-      border-image-position: 0;
-    }
-    100% {
-      border-image-position: 100%;
-    }
+  100% {
+    border-image-position: 100%;
   }
+}
