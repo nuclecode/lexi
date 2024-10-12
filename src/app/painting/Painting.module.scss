@@ -1,0 +1,49 @@
+.paintingPage {
+    padding: 20px;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  .hero {
+    background-color: #75563C;
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+  
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+  
+    p {
+      font-size: 1.25rem;
+    }
+  }
+  
+  .workingProcess {
+    margin-top: 40px;
+  
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+  
+    .step {
+      background-color: #FFFFFF;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-left: 4px solid #EFA92F;
+  
+      h3 {
+        font-size: 1.5rem;
+        color: #4C3C2E;
+      }
+  
+      p {
+        font-size: 1rem;
+        color: #333;
+      }
+    }
+  }
+  

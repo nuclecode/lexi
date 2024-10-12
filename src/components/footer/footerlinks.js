@@ -11,10 +11,10 @@ const footerlinks = [
     {
         title: 'Services',
         links: [
-            { name: 'Electrical Work', href: '/electrical-work' },
+            { name: 'Electrical Work', href: '/electricalWork' },
             { name: 'Plastering', href: '/plastering' },
             { name: 'Painting', href: '/painting' },
-            { name: 'Full Renovation', href: '/full-renovation' },
+            { name: 'Full Renovation', href: '/fullRenovation' },
         ],
     },
     {

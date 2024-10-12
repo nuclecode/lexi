@@ -8,9 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "postbuild": "next-sitemap"
-
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "framer-motion": "^11.11.1",
     "next": "14.2.14",
     "next-sitemap": "^4.2.3",
