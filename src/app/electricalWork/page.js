@@ -3,7 +3,7 @@
 import styles from './ElectricalWork.module.scss';
 import Head from 'next/head';
 import Image from 'next/image'; 
-import Snake from '@/components/Snake/Snake'; 
+import Snake from '../../components/snake/Snake'; 
 
 const ElectricalWork = () => {
   return (
