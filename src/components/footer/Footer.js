@@ -5,6 +5,7 @@ import footerlinks from './footerlinks';
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import logo from '../../../public/Business card-LEXI_02_for PRINT-02.jpg';
 import Image from 'next/image';
+// import Head from 'next/head';
 
 
 const Footer = () => {
@@ -33,6 +34,13 @@ const Footer = () => {
     };
 
     return (
+        <>
+        {/* <Head>
+      <meta charSet="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="description" content="Contact form of LEXI Construction Services - Renovation services for home, office, appartments." />
+      <title>Footer LEXI Construction Services</title>
+       </Head> */}
       <footer className={styles.footer}>
           <div className={styles.topSection}>
               <div>
@@ -101,7 +109,7 @@ const Footer = () => {
                   <Image src={logo} alt="Lexi Logo" width='auto' height={150}/>
               </div>
               <div className={styles.cta}>
-                  <Link as="a" href="/contact">Contact Us</Link>
+                  <Link href="/contact">Contact Us</Link>
               </div>
           </div>
 
@@ -139,236 +147,8 @@ const Footer = () => {
           </div>
 
       </footer>
+      </>
     );
 };
 
 export default Footer;
-
-// 'use client'
-// import styles from './Footer.module.scss';
-// import { FaFacebook, FaLinkedin, FaInstagram } from 'react-icons/fa';
-// import { useState } from 'react';
-//
-// const Footer = () => {
-//   const [year] = useState(new Date().getFullYear());
-//
-//   const handleCopy = (text) => {
-//     navigator.clipboard.writeText(text);
-//     alert(`Copied: ${text}`);
-//   };
-//
-//   return (
-//       <footer className={styles.footer}>
-//         <div className={styles.footerContainer}>
-//           {/* Column 1: Logo and Social Links */}
-//           <div className={styles.logoSocialColumn}>
-//             <img src="/logo.png" alt="Company Logo" className={styles.logo} />
-//             <div className={styles.socialLinks}>
-//               <a href="https://www.linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-//                 <FaLinkedin />
-//               </a>
-//               <a href="https://www.instagram.com" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-//                 <FaInstagram />
-//               </a>
-//               <a href="https://www.facebook.com" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
-//                 <FaFacebook />
-//               </a>
-//             </div>
-//             <button className={styles.ctaButton}>Contact Us</button>
-//           </div>
-//
-//           {/* Column 2-5: Links */}
-//           <div className={styles.footerColumn}>
-//             <h4 className={styles.footerTitle}>FOR</h4>
-//             <ul className={styles.footerList}>
-//               <li className={styles.footerItem}>Landlords</li>
-//               <li className={styles.footerItem}>Investors</li>
-//               <li className={styles.footerItem}>Renovators</li>
-//               <li className={styles.footerItem}>Property Developers</li>
-//             </ul>
-//           </div>
-//           <div className={styles.footerColumn}>
-//             <h4 className={styles.footerTitle}>SERVICES</h4>
-//             <ul className={styles.footerList}>
-//               <li className={styles.footerItem}>Electrical Work</li>
-//               <li className={styles.footerItem}>Plastering</li>
-//               <li className={styles.footerItem}>Painting</li>
-//               <li className={styles.footerItem}>Full Renovation</li>
-//             </ul>
-//           </div>
-//           <div className={styles.footerColumn}>
-//             <h4 className={styles.footerTitle}>ABOUT US</h4>
-//             <ul className={styles.footerList}>
-//               <li className={styles.footerItem}>Our Team</li>
-//               <li className={styles.footerItem}>Clients</li>
-//               <li className={styles.footerItem}>Collaborations</li>
-//               <li className={styles.footerItem}>Testimonials</li>
-//             </ul>
-//           </div>
-//           <div className={styles.footerColumn}>
-//             <h4 className={styles.footerTitle}>CONTACT US</h4>
-//             <p className={styles.contactItem} onClick={() => handleCopy("+44 123 456 789")}>
-//               +44 123 456 789 (click to copy)
-//             </p>
-//             <p className={styles.contactItem} onClick={() => handleCopy("info@lexi.com")}>
-//               info@lexi.com (click to copy)
-//             </p>
-//             <p className={styles.contactItem}>123 Renovation Street</p>
-//             <p className={styles.contactItem}>London, UK</p>
-//           </div>
-//         </div>
-//
-//         {/* Bottom Footer */}
-//         <div className={styles.bottomFooter}>
-//           <div className={styles.bottomLinks}>
-//             <a href="/sitemap" className={styles.bottomLink}>Sitemap</a>
-//             <a href="/cookies" className={styles.bottomLink}>Cookies</a>
-//             <a href="/terms" className={styles.bottomLink}>Terms & Conditions</a>
-//           </div>
-//           <p className={styles.bottomText}>
-//             © {year} LEXI Construction Services | All rights reserved
-//           </p>
-//           <p className={styles.bottomRightText}>Developed by nuclecode</p>
-//         </div>
-//       </footer>
-//   );
-// };
-
-// export default Footer;
-
-// import React from 'react';
-//
-// const Footer = () => {
-//   return (
-//     <footer style={footerStyles}>
-//       <div style={footerContainerStyles}>
-//         <div style={footerColumn}>
-//           <h4 style={footerTitleStyles}>FOR</h4>
-//           <ul style={listStyles}>
-//             <li style={listItemStyles}>Landlords</li>
-//             <li style={listItemStyles}>Investors</li>
-//             <li style={listItemStyles}>Renovators</li>
-//             <li style={listItemStyles}>Property Developers</li>
-//           </ul>
-//         </div>
-//         <div style={footerColumn}>
-//           <h4 style={footerTitleStyles}>SERVICES</h4>
-//           <ul style={listStyles}>
-//             <li style={listItemStyles}>Electrical Work</li>
-//             <li style={listItemStyles}>Plastering</li>
-//             <li style={listItemStyles}>Painting</li>
-//             <li style={listItemStyles}>Full Renovation</li>
-//           </ul>
-//         </div>
-//         <div style={footerColumn}>
-//           <h4 style={footerTitleStyles}>ABOUT US</h4>
-//           <ul style={listStyles}>
-//             <li style={listItemStyles}>Our Team</li>
-//             <li style={listItemStyles}>Clients</li>
-//             <li style={listItemStyles}>Collaborations</li>
-//             <li style={listItemStyles}>Testimonials</li>
-//           </ul>
-//         </div>
-//         <div style={footerColumn}>
-//           <h4 style={footerTitleStyles}>CONTACT US</h4>
-//           <p style={contactStyles}>+44 123 456 789</p>
-//           <p style={contactStyles}>info@lexi.com</p>
-//           <p style={contactStyles}>123 Renovation Street</p>
-//           <p style={contactStyles}>London, UK</p>
-//         </div>
-//       </div>
-//       <div style={bottomFooterStyles}>
-//         <p style={bottomTextStyles}>© 2024 LEXI Construction Services | All rights reserved</p>
-//         <p style={bottomTextStyles}>Privacy Policy</p>
-//       </div>
-//     </footer>
-//   );
-// };
-//
-// const footerStyles = {
-//   backgroundColor: '#75563C', // Light brown
-//   padding: '50px 0',
-//   color: '#FFFFFF', // White text color
-// };
-//
-// const footerContainerStyles = {
-//   display: 'flex',
-//   justifyContent: 'space-between',
-//   padding: '0 50px',
-//   maxWidth: '1200px',
-//   margin: '0 auto',
-//   textAlign: 'left',
-// };
-//
-// const footerColumn = {
-//   flex: '1',
-// };
-//
-// const footerTitleStyles = {
-//   color: '#F8E370', // Light yellow
-//   fontSize: '18px',
-//   marginBottom: '15px',
-//   fontWeight: 'bold',
-// };
-//
-// const listStyles = {
-//   listStyle: 'none',
-//   padding: '0',
-// };
-//
-// const listItemStyles = {
-//   color: '#EFA92F', // Dark yellow
-//   marginBottom: '10px',
-//   fontSize: '14px',
-// };
-//
-// const contactStyles = {
-//   color: '#FFFFFF', // White text for contact info
-//   marginBottom: '10px',
-// };
-//
-// const bottomFooterStyles = {
-//   backgroundColor: '#4C3C2E', // Dark brown
-//   padding: '20px 0',
-//   textAlign: 'center',
-// };
-//
-// const bottomTextStyles = {
-//   color: '#FFFFFF', // White text for bottom section
-//   fontSize: '12px',
-// };
-//
-// export default Footer;
-//
-
-
-
-// import React from 'react';
-
-// const Footer = () => {
-//   return (
-//     <footer style={footerStyles}>
-//       <p style={footerTextStyles}>© 2024 LEXI Construction Services</p>
-//     </footer>
-//   );
-// };
-
-// const footerStyles = {
-//   backgroundColor: '#75563C', // Light brown
-//   padding: '20px',
-//   color: '#F8E370', // Light yellow
-//   position: 'relative',
-//   display: 'flex',
-//   justifyContent: 'center',
-//   alignItems: 'center',
-//   textAlign: 'center',
-//   boxShadow: '0 -2px 10px rgba(0, 0, 0, 0.15)',
-//   backgroundImage: `url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjEwMCIgd2lkdGg9IjEwMCI+PHJlY3Qgd2lkdGg9IjEwMCUgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjNzU1NjNDIi8+PHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiB4PSI1IiB5PSI1IiBmaWxsPSIjNEMzQzJFIiBvcGFjaXR5PSIwLjYiLz48L3N2Zz4=)`, // Flecks effect
-//   backgroundSize: 'contain',
-// };
-
-// const footerTextStyles = {
-//   color: '#FFFFFF', // White
-// };
-
-// export default Footer;

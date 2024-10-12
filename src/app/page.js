@@ -1,9 +1,18 @@
 import React from "react";
 import Hero from "../components/hero/Hero"
+import Head from 'next/head';
+import { metadata } from '../utils/metadata';
 
 const HomePage = () => {
   return (
     <>
+    <Head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content={metadata.home.description} />
+        <title>{metadata.home.title}</title>
+      </Head>
+
     <Hero />
 
     <section style={sectionStyles}> 
