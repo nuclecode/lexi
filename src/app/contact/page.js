@@ -23,8 +23,9 @@ export default function ContactPage() {
     <Head>
     <meta charSet="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Contact Us - LEXI Construction Services</title>
-      <meta name="description" content="Get in touch with us for partnership or renovation services." />
+      
+      <meta name="description" content={metadata.contact.description} />
+      <title>{metadata.contact.title}</title>
     </Head>
     <div className={styles.contactContainer}>
       <div className={styles.heroImage}>
