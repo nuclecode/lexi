@@ -13,7 +13,7 @@ export const metadata = {
     },
     contact: {
       title: "Contact Us - LEXI Construction Services",
-      description: "Get in touch with LEXI Construction Services for your renovation needs."
+      description: "Get in touch with LEXI Construction Services for partnership or your renovation needs."
     },
     collaborations: {
       title: "Collaborations - LEXI Construction Services",
