@@ -1,10 +1,11 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import styles from "./landing.module.scss"; // Ensure this points to your SCSS file
+import styles from "./landing.module.scss";
+import Image from "next/image";
 
 const NewTextImageSection = () => {
-    const scrollRef = useRef(null); // Single ref for the overall scroll area
+    const scrollRef = useRef(null);
 
     return (
         <section className={styles.newTextImageSection} ref={scrollRef}>
@@ -16,18 +17,22 @@ const NewTextImageSection = () => {
                 <div className={styles.newImageContainer}>
                     <div className={styles.newImagePlaceholder}>
                         <span className={styles.label}>Before</span>
-                        <img
+                        <Image
                             src="/london-houses-2.jpg"
                             alt="Description of image 1"
                             className={styles.newImage}
+                            width={200}
+                            height={200}
                         />
                     </div>
                     <div className={styles.newImagePlaceholder}>
                         <span className={styles.label}>After</span>
-                        <img
+                        <Image
                             src="/london-houses-stock.jpg"
                             alt="Description of image 2"
                             className={styles.newImage}
+                            width={200}
+                            height={200}
                         />
                     </div>
                 </div>

@@ -1,20 +1,20 @@
 "use client";
-
-import styles from "./landing.module.scss"; // Ensure this points to your SCSS file
+import Image from 'next/image';
+import styles from "./landing.module.scss";
 
 const PartnershipSection = () => {
     return (
         <section className={styles.partnershipSection}>
             <div className={styles.partnershipContainer}>
-                {/* Left Box with Image */}
                 <div className={styles.imageBox}>
-                    <img
-                        src="/london-houses-stock.jpg" // Replace with your image source
+                    <Image
+                        src="/london-houses-stock.jpg"
                         alt="Partnership"
                         className={styles.partnershipImage}
+                        width={200}
+                        height={200}
                     />
                 </div>
-                {/* Right Box with Text */}
                 <div className={styles.textBox}>
                     <h2 className={styles.partnershipTitle}>Our Partnerships</h2>
                     <p className={styles.partnershipSubtitle}>
