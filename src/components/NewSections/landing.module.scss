@@ -1,0 +1,406 @@
+// app/landing/styles/landing.module.scss
+
+// Existing styles for your sections
+.textImageSection {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: row; /* Horizontal layout for text and image container */
+  align-items: flex-start; /* Align items at the top */
+  padding: 20px; /* Add padding */
+
+  // Media query for smaller screens
+  @media (max-width: 768px) {
+    flex-direction: column; /* Stack items vertically */
+  }
+}
+
+.text {
+  flex: 1; /* Allow text to take up available space */
+  text-align: left; /* Align text to the left */
+  margin-right: 20px; /* Space between text and image container */
+
+  // Media query for smaller screens
+  @media (max-width: 768px) {
+    margin-right: 0; /* Remove right margin when stacked */
+  }
+}
+
+.imageContainer {
+  border-radius: 10px;
+  width: 400px; /* Fixed width for the image container */
+  height: 400px; /* Set a fixed height for the image container */
+  overflow-y: auto; /* Allow vertical scrolling */
+  scroll-snap-type: y mandatory; /* Enable vertical scroll snapping */
+  display: flex; /* Use flex to lay out images vertically */
+  flex-direction: column; /* Stack images vertically */
+  position: relative; /* Required for positioning */
+
+  // Media query for smaller screens
+  @media (max-width: 768px) {
+    width: 100%; /* Full width when stacked */
+    height: 400px; /* Maintain height on smaller screens */
+    overflow-y: auto; /* Allow vertical scrolling */
+  }
+}
+
+.imagePlaceholder {
+  flex: none; /* Prevent flex items from growing */
+  scroll-snap-align: start; /* Align to the start of the container */
+  height: 100%; /* Take full height of container */
+  opacity: 0; /* Start with images hidden */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transitions */
+}
+
+.image {
+  width: 100%; /* Responsive image width */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove bottom space for images */
+}
+
+
+
+// Snapping Scroll Section
+.snappingContainer {
+  height: 100vh; // Full height of viewport for container
+  overflow-y: scroll; // Enable vertical scrolling
+  scroll-snap-type: y mandatory; // Enable snapping in the Y axis, mandatory snapping
+  scrollbar-width: none; // Hide scrollbar for clean appearance in Firefox
+  -ms-overflow-style: none; // Hide scrollbar for IE and Edge
+}
+
+.snappingContainer::-webkit-scrollbar {
+  display: none; // Hide scrollbar for WebKit browsers
+}
+
+// Sections that snap
+.snappingSection {
+  position: relative; // Allows absolute positioning of the number
+  height: 100vh; // Each section takes the full height of the viewport
+  scroll-snap-align: start; // Each section will snap to the start of the viewport
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem; // Styling for the content inside each snapping section
+}
+
+// Large numbers in each section
+.sectionNumber {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 6rem; // Large font size for the number
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.05); // Light color for the watermark effect
+  z-index: 1; // Ensures the number stays behind other content
+}
+
+// 3-card section styling
+.cardSection {
+  display: flex;
+  flex-wrap: wrap; // Allow cards to wrap onto the next line
+  justify-content: center; // Center the cards
+  padding: 2rem;
+  width: 100%; // Full width of the container
+  box-sizing: border-box; // Ensure padding is included in width
+}
+
+.card {
+  width: 300px; // Fixed width for square cards
+  height: 300px; // Fixed height for square cards
+  margin: 1rem; // Margin around the cards (adds space between them)
+  padding: 1.5rem; // Padding inside the card
+  border: 2px solid rgba(76, 60, 46, 0.19);
+  //background-color: white;
+  border-radius: 8px; // Rounded corners
+  text-align: center; // Center text
+  box-shadow: 0 4px 8px rgba(76, 60, 46, 0.4); // Shadow effect
+  display: flex; // Enable flexbox for card layout
+  flex-direction: column; // Stack elements vertically
+  justify-content: space-between; // Space between title, subtitle, and description
+
+  // Ensure cards maintain their square shape and center on smaller screens
+  @media (max-width: 768px) {
+    margin: 1rem auto; // Center card on small screens with space around
+  }
+}
+
+// Title Styles
+.cardTitle {
+  font-size: 1.5rem; // Adjust title font size
+  margin-bottom: 0.5rem; // Space below title
+}
+
+// Subtitle Styles
+.cardSubtitle {
+  font-size: 1.2rem; // Adjust subtitle font size
+  margin-bottom: 0.5rem; // Space below subtitle
+}
+
+// Separator Styles
+.separator {
+  height: 2px; // Height of the line
+  width: 100%; // Full width of the card
+  background-color: #ccc; // Color of the separator
+  margin-bottom: 0.5rem; // Space below separator
+}
+
+// Add responsive behavior
+@media (max-width: 1024px) {
+  .cardSection {
+    justify-content: center; // Center cards in the section
+  }
+}
+
+// Stack cards on top of each other for very small screens
+@media (max-width: 600px) {
+  .cardSection {
+    flex-direction: column; // Stack cards vertically
+    align-items: center; // Center cards in column
+  }
+
+  .card {
+    margin: 1rem 0; // Vertical spacing between stacked cards
+  }
+}
+
+//BEFORE AND AFTER
+.newTextImageSection {
+  position: relative;
+  padding: 20px; // Space around the section
+}
+
+.newImageContainerWrapper {
+  display: flex; // Align items horizontally
+  justify-content: center; // Center the content
+  margin-top: 20px;
+}
+
+.newImageContainer {
+  display: flex; // Flexbox for horizontal alignment
+  justify-content: space-between; // Space between images
+  width: 100%; // Full width
+  max-width: 1200px; // Max width for larger screens
+}
+
+.newImagePlaceholder {
+  position: relative; // For positioning labels
+  width: 50%; // Each image takes half the width
+  overflow: hidden; // Prevent overflow
+  display: flex;
+  flex-direction: column; // Stack label above the image
+  align-items: center; // Center contents
+}
+
+.label {
+  position: absolute; // Position the label on top of the image
+  top: 10px; // Adjust to fit above the image
+  left: 10px; // Adjust positioning as needed
+  background: rgba(255, 255, 255, 0.7); // Semi-transparent background for visibility
+  padding: 5px 10px; // Padding around label
+  font-weight: bold;
+  font-size: 1.2rem; // Adjust as needed
+}
+
+.newImage {
+  width: 100%; // Make image responsive
+  height: auto; // Maintain aspect ratio
+  transition: transform 0.3s; // Add transition for hover effect
+}
+
+@media (max-width: 768px) {
+  .newImageContainer {
+    flex-direction: column; // Stack images vertically on small screens
+  }
+  .newImagePlaceholder {
+    width: 100%; // Full width for stacked images
+  }
+}
+
+
+
+
+// Testimonials Section
+.testimonialsSection {
+  height: 100vh; // Full height for snapping
+  display: flex;
+  justify-content: center; // Center horizontally
+  align-items: center; // Center vertically
+  background-color: #f8f8f8; // Light background color
+}
+
+.carousel {
+  width: 80%; // Set a fixed width for the carousel
+  max-width: 600px; // Max width for larger screens
+  overflow: hidden; // Hide overflow for the carousel
+  display: flex; // Ensure carousel is a flex container
+  justify-content: center; // Center carousel content
+  height: 200px;
+}
+
+.carouselContainer {
+  display: flex; // Align testimonials horizontally
+  transition: transform 0.5s ease-in-out; // Smooth transitions
+}
+
+.testimonial {
+  flex: 0 0 100%; // Each testimonial takes 100% of the carousel width
+  padding: 20px; // Add padding for testimonials
+  box-sizing: border-box; // Include padding in width calculations
+  text-align: center; // Center text alignment
+  font-size: 1.5rem; // Font size for testimonials
+  background-color: white; // Background color for testimonials
+  border-radius: 10px; // Rounded corners
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); // Subtle shadow effect
+}
+
+@media (max-width: 768px) {
+  .testimonial {
+    font-size: 1.2rem; // Adjust font size for smaller screens
+  }
+}
+
+
+
+// Partner Section
+.partnershipSection {
+  height: 100vh; // Full viewport height
+  width: 100vw; // Full viewport width
+  display: flex; // Use flexbox for layout
+  align-items: center; // Center content vertically
+  overflow: hidden; // Prevent overflow if necessary
+}
+
+.partnershipContainer {
+  display: flex; // Align children horizontally
+  width: 100%; // Full width
+}
+
+.imageBox {
+  flex: 1; // Take up half of the space
+  display: flex; // Center the image
+  justify-content: center; // Center horizontally
+  align-items: center; // Center vertically
+}
+
+.partnershipImage {
+  max-width: 100%; // Make the image responsive
+  height: auto; // Maintain aspect ratio
+}
+
+.textBox {
+  flex: 1; // Take up half of the space
+  padding: 20px; // Space around text
+  display: flex; // Use flexbox to center text
+  flex-direction: column; // Stack text vertically
+  justify-content: center; // Center text vertically
+  align-items: flex-start; // Align text to the left
+}
+
+.partnershipTitle {
+  font-size: 2rem; // Adjust title size as needed
+  margin: 0; // Remove default margin
+}
+
+.partnershipSubtitle {
+  font-size: 1.2rem; // Adjust subtitle size as needed
+  margin: 10px 0; // Margin for spacing
+}
+
+.ctaButton {
+  background-color: #007bff; // Button background color
+  color: #fff; // Button text color
+  padding: 10px 20px; // Padding for button
+  border: none; // Remove border
+  border-radius: 5px; // Rounded corners
+  text-decoration: none; // Remove underline
+  font-weight: bold; // Bold text
+  transition: background-color 0.3s; // Transition for hover effect
+}
+
+.ctaButton:hover {
+  background-color: #0056b3; // Darker color on hover
+}
+
+@media (max-width: 768px) {
+  .partnershipContainer {
+    flex-direction: column; // Stack the boxes vertically on smaller screens
+  }
+
+  .textBox {
+    align-items: center; // Center text for smaller screens
+    text-align: center; // Center text alignment
+  }
+}
+
+
+// Contact Form Section
+.getInTouchSection {
+  display: flex; // Use flexbox for layout
+  justify-content: space-between; // Space out text and form
+  align-items: center; // Center vertically
+  padding: 50px; // Add padding around the section
+  background-color: #f8f8f8; // Light background color
+}
+
+.getInTouchText {
+  flex: 1; // Take up one side of the section
+  h2 {
+    font-size: 2rem; // Font size for the title
+    color: #333; // Darker text color
+  }
+}
+
+.getInTouchForm {
+  flex: 1; // Take up the other side of the section
+  display: flex; // Use flex for the form layout
+  flex-direction: column; // Stack form fields vertically
+  padding-left: 20px; // Add space between text and form
+
+  .formGroup {
+    margin-bottom: 20px; // Spacing between fields
+    label {
+      display: block; // Labels should take full width
+      margin-bottom: 5px; // Space between label and input
+      font-weight: bold; // Bold labels
+    }
+    input, textarea {
+      width: 100%; // Full width inputs
+      padding: 10px; // Padding inside inputs
+      border: 1px solid #ccc; // Light border color
+      border-radius: 5px; // Rounded corners
+      font-size: 1rem; // Font size for inputs
+      &:focus {
+        border-color: #007bff; // Change border color on focus
+        outline: none; // Remove outline
+      }
+    }
+    textarea {
+      height: 100px; // Fixed height for the textarea
+    }
+  }
+
+  // Add the button styles inside the form class
+  .submitButton {
+    padding: 10px 20px; // Padding for the button
+    background-color: #007bff; // Button background color
+    color: white; // White text color
+    border: none; // No border
+    border-radius: 5px; // Rounded corners
+    cursor: pointer; // Pointer on hover
+    font-size: 1rem; // Font size for button
+    transition: background-color 0.3s; // Smooth transition for background color
+
+    &:hover {
+      background-color: #0056b3; // Darker blue on hover
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .getInTouchSection {
+    flex-direction: column; // Stack elements on smaller screens
+    align-items: flex-start; // Align items to the start
+  }
+  .getInTouchText {
+    margin-bottom: 20px; // Space below text on mobile
+  }
+}

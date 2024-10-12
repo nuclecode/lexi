@@ -9,7 +9,8 @@ import "../styles/globals.scss";
 import Header from '../components/header/Header';
 import Footer from '../components/footer/Footer';
 
-
+import ParallaxWrapper from '../components/ParallaxWrapper/ParallaxWrapper';
+import DesktopNavbar from '../components/HeaderNew/Desktop/DesktopNavbar';
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -46,8 +47,8 @@ export default function RootLayout({ children }) {
     </Head>
     <body className={`${geistSans.variable} ${geistMono.variable}`}>
 
-      <Header className={styles.header} />
-      
+      {/*<Header className={styles.header} />*/}
+      <DesktopNavbar />
 {/* 
     <header style={headerStyle}>
       <div style={logoStyle}>LEXI Construction Services</div> */}
@@ -64,9 +65,11 @@ export default function RootLayout({ children }) {
         </ul>
       </nav>
     </header> */}
+    <ParallaxWrapper>
     <main className={styles.main}>{children}</main>
+    </ParallaxWrapper>
 
-    {/*<FooterTop className={styles.footer} />*/}
+      {/*<FooterTop className={styles.footer} />*/}
     <Footer className={styles.footer} />
     {/* <footer style={footerStyle}>
       <p>&copy; {new Date().getFullYear()} LEXI Construction Services. All Rights Reserved.</p>
