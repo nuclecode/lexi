@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import logo from '../../../public/Business card-LEXI_02_for PRINT-02.jpg'; 
+import logo from '../../../public/logo.png';
 
 import styles from './Header.module.scss';
 import { useRouter } from 'next/navigation';

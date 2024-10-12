@@ -3,12 +3,14 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
+    max-width: 100%;
+    height: auto;
   }
   
   body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #F8E370; /* #FFF8DC; */
+    background-color: #FFF8DC;
   }
   
   a {
