@@ -1,0 +1,7 @@
+.nextSection {
+  position: relative; // Allows it to be positioned above the video
+  background-color: white;
+  padding: 50px; // Space around your content
+  z-index: 1; // Ensure it appears above the video and overlay
+}
+

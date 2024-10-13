@@ -1,0 +1,108 @@
+@import '../../../styles/variables.scss';
+
+.navbar {
+  position: fixed; // Fix the navbar at the top
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; // Keep it above other elements
+  width: 100%;
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease; // Smooth transitions
+
+  &.scrolled {
+    backdrop-filter: blur(10px); // Blur effect on scroll
+    background-color: rgba(255, 255, 255, 0.3); // Semi-transparent background
+
+    // Styling for links and logo when scrolled
+    li {
+      a {
+        text-decoration: none; // Remove underline
+        color: black; // Link color
+        font-weight: bold; // Bold links
+        transition: color 0.3s ease; // Smooth color transition
+
+        &:hover {
+          color: #F8E370; // Change color on hover
+        }
+      }
+    }
+
+    .contactInfo {
+      color: black; // Contact info color when scrolled
+    }
+
+    .logo {
+      color: black; // Logo color when scrolled
+    }
+  }
+}
+
+.navContent {
+  display: flex; // Flexbox for alignment
+  justify-content: space-between; // Space between logo and links
+  align-items: center; // Center vertically
+  padding: 20px; // Padding around navbar
+}
+
+.logo {
+  font-size: 24px; // Logo font size
+  color: white; // Initial logo color
+}
+
+.navLinks {
+  list-style: none; // Remove bullet points
+  display: flex; // Flexbox for horizontal alignment
+  gap: 20px; // Space between links
+
+  li {
+    a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #F8E370;
+      }
+    }
+  }
+}
+
+.contactInfo {
+  display: flex; // Flexbox for alignment
+  align-items: center; // Center the icon and text vertically
+  color: white; // Initial contact info color
+
+  .phoneIcon {
+    margin-right: 8px;
+    font-size: 24px;
+  }
+
+  .phoneNumber {
+    font-weight: bold;
+  }
+}
+
+// Keyframes for ringing animation
+@keyframes ringing {
+  0% {
+    transform: rotate(0deg) scale(1); // Initial state
+  }
+  25% {
+    transform: rotate(5deg) scale(1.1); // Tilt to the right
+  }
+  50% {
+    transform: rotate(0deg) scale(1); // Back to initial
+  }
+  75% {
+    transform: rotate(-5deg) scale(1.1); // Tilt to the left
+  }
+  100% {
+    transform: rotate(0deg) scale(1); // Back to initial
+  }
+}
+
+.ringing {
+  animation: ringing 1s infinite; // Apply the ringing animation
+}

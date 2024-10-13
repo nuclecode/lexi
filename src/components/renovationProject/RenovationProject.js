@@ -1,88 +1,66 @@
 "use client";
 
 import styles from './RenovationProject.module.scss';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useCallback, useMemo } from 'react';
 import Image from 'next/image';
 
 export default function RenovationProject() {
-  const beforeImageRef = useRef(null);
-  const [isSticky, setIsSticky] = useState(false);
-  const [scrollY, setScrollY] = useState(0);
+    const beforeImageRef = useRef(null);
+    const [isSticky, setIsSticky] = useState(false);
 
-  
-  const handleScroll = () => {
-    setScrollY(window.scrollY);
-    const beforeImageHeight = beforeImageRef.current.offsetHeight;
+    // Memoizing the menuItems array to avoid redefinition on every render
+    const menuItems = useMemo(() => [
+        /* your menu items here */
+    ], []);
 
-    if (scrollY >= beforeImageHeight) {
-      setIsSticky(true);
-    } else {
-      setIsSticky(false);
-    }
-  };
+    // Memoizing the handleScroll function to prevent recreation on every render
+    const handleScroll = useCallback(() => {
+        const beforeImageHeight = beforeImageRef.current.offsetHeight;
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const beforeImageHeight = beforeImageRef.current.offsetHeight; // Get height of the "before" image
+        if (window.scrollY >= beforeImageHeight) {
+            setIsSticky(true);
+        } else {
+            setIsSticky(false);
+        }
+    }, []); // Empty dependency array as it doesn't rely on external variables
 
-      // Sticky logic for "before" image and "done" text
-      if (window.scrollY >= beforeImageHeight) {
-        setIsSticky(true);
-      } else {
-        setIsSticky(false);
-      }
-    };
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
 
-    window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [handleScroll]); // Only runs when handleScroll changes, which it doesn't due to useCallback
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+    return (
+        <div className={styles.renovationProject}>
+            <section className={styles.clientRequest}>
+                <h2>Что хотел заказчик</h2>
+                <p>Это то, что клиент изначально запросил: полная реконструкция кухни с новыми шкафами, столешницами и полами.</p>
+            </section>
 
+            <div className={styles.imageContainer}>
+                <Image
+                    ref={beforeImageRef}
+                    src="/images/bathroom_before.PNG"
+                    alt="Before Renovation"
+                    className={`${styles.beforeImage} ${isSticky ? styles.sticky : ''}`}
+                    width={500}
+                    height={300}
+                />
 
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [scrollY]);
+                <p className={`${styles.madeText} ${isSticky ? styles.madeTextSticky : ''}`}>
+                    Это то, что мы сделали для достижения ремонта: мы установили новые шкафы на заказ, гранитные столешницы и полы высокого класса.
+                </p>
+            </div>
 
-  return (
-    <div className={styles.renovationProject}>
-      <section className={styles.clientRequest}>
-        <h2>Что хотел заказчик</h2>
-        <p>Это то, что клиент изначально запросил: полная реконструкция кухни с новыми шкафами, столешницами и полами.</p>
-      </section>
-
-      <div className={styles.imageContainer}>
-
-        <Image
-
-          ref={beforeImageRef} 
-          src="/images/bathroom_before.PNG" 
-          alt="Before Renovation" 
-          className={`${styles.beforeImage} ${isSticky ? styles.sticky : ''}`}
-
-          width={500} 
-          height={300}
-
-        />
-
-        {/* Текст "Что мы сделали" */}
-        <p className={`${styles.madeText} ${isSticky ? styles.madeTextSticky : ''}`}>
-          Это то, что мы сделали для достижения ремонта: мы установили новые шкафы на заказ, гранитные столешницы и полы высокого класса.
-        </p>
-      </div>
-
-      <Image
-        src="/images/bathroom_after.PNG" 
-        alt="After Renovation" 
-        className={styles.afterImage}
-        width={500}
-        height={300}
-    />
-    </div>
-  );
+            <Image
+                src="/images/bathroom_after.PNG"
+                alt="After Renovation"
+                className={styles.afterImage}
+                width={500}
+                height={300}
+            />
+        </div>
+    );
 }

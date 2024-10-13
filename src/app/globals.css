@@ -3,16 +3,35 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
-    max-width: 100%;
-    height: auto;
+}
+  html {
+      scroll-behavior: smooth;
   }
-  
+
   body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #FFF8DC;
+    background-color: #fffce9; /* #FFF8DC; */
   }
-  
+
+.navigation {
+    background-color: white; /* Navigation background color */
+    padding: 10px; /* Padding around navigation */
+    text-align: center; /* Center the navigation items */
+}
+
+.navigation a {
+    margin: 0 15px; /* Space between links */
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Link color */
+    font-weight: bold; /* Make links bold */
+}
+
+
+.element {
+    transition: opacity 0.5s ease; /* Smooth opacity transition */
+}
+
   a {
     text-decoration: none;
     color: #FFD700;

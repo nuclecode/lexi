@@ -2,6 +2,14 @@ import React from "react";
 import Hero from "../components/hero/Hero"
 import Head from 'next/head';
 import { metadata } from '../utils/metadata';
+import TextImageSection from "../components/NewSections/TextImageSection";
+import CardSection from "../components/NewSections/CardSection";
+import SnappingScrollSection from "../components/NewSections/SnappingScrollSection";
+import BeforeAfterSection from "../components/NewSections/BeforeAfterSection";
+import TestimonialsSection from "../components/NewSections/TestimonialsSection";
+import PartnerUsSection from "../components/NewSections/PartnerUsSection";
+import GetInTouchForm from "../components/NewSections/GetInTouchForm";
+import styles from "../components/NewSections/landing.module.scss";
 
 const HomePage = () => {
   return (
@@ -13,26 +21,36 @@ const HomePage = () => {
         <title>{metadata.home.title}</title>
       </Head>
 
-    <Hero />
+      <div className={styles.landingPage}>
+        <Hero/>
+        <TextImageSection/>
+        <CardSection/>
+        <SnappingScrollSection/>
+        <BeforeAfterSection/>
+        <TestimonialsSection/>
+        <PartnerUsSection/>
+        <GetInTouchForm/>
+        {/*<section style={sectionStyles}>*/}
 
-    <section style={sectionStyles}> 
-      
-        <h1 style={headingStyles}>Welcome to LEXI Construction Services</h1>
+        {/*  <h1 style={headingStyles}>Welcome to LEXI Construction Services</h1>*/}
 
-          <p style={paragraphStyles}>Your dream home is just a renovation away!  We provide home, office, and apartment renovation services including electrical work, painting, and plastering. Our services are ideal for landlords, investors, and property owners looking to refresh or renovate their spaces.
-          </p>
+        {/*  <p style={paragraphStyles}>Your dream home is just a renovation away! We provide home, office, and apartment*/}
+        {/*    renovation services including electrical work, painting, and plastering. Our services are ideal for*/}
+        {/*    landlords, investors, and property owners looking to refresh or renovate their spaces.*/}
+        {/*  </p>*/}
 
-          <p style={ctaStyles}>Get in touch for a free quote today!</p>
+        {/*  <p style={ctaStyles}>Get in touch for a free quote today!</p>*/}
 
-          <div style={divStyle}>Brown</div>
+        {/*  <div style={divStyle}>Brown</div>*/}
 
-          <div style={letterStyle}>This is a letters color</div>
+        {/*  <div style={letterStyle}>This is a letters color</div>*/}
 
-          <div style={darkBrownStyle}>This is a dark brown color</div>
+        {/*  <div style={darkBrownStyle}>This is a dark brown color</div>*/}
 
-          <div style={greyStyle}>This is a grey color with dark grey letters</div>
-    </section>  
-    </>
+        {/*  <div style={greyStyle}>This is a grey color with dark grey letters</div>*/}
+        {/*</section>*/}
+      </div>
+      </>
   );
 }
 
@@ -97,8 +115,8 @@ export default HomePage;
 //     <>
 //     <Hero />
 
-//     <section style={sectionStyles}> 
-      
+//     <section style={sectionStyles}>
+
 //         <h1 style={headingStyles}>Welcome to LEXI Construction Services</h1>
 
 //           <p style={paragraphStyles}>Your dream home is just a renovation away!  We provide home, office, and apartment renovation services including electrical work, painting, and plastering. Our services are ideal for landlords, investors, and property owners looking to refresh or renovate their spaces.
@@ -113,7 +131,7 @@ export default HomePage;
 //           <div style={darkBrownStyle}>This is a dark brown color</div>
 
 //           <div style={greyStyle}>This is a grey color with dark grey letters</div>
-//     </section>  
+//     </section>
 //     </>
 //   );
 // }
