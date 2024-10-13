@@ -1,0 +1,82 @@
+.hero {
+    background-image: url('/images/plastering-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    padding: 100px 20px;
+    text-align: center;
+  
+    .heroContent {
+      max-width: 800px;
+      margin: 0 auto;
+  
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+      }
+  
+      p {
+        font-size: 1.2rem;
+        line-height: 1.5;
+      }
+    }
+  }
+  
+  .services {
+    padding: 50px 20px;
+    background-color: #f8f8f8;
+    
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  
+    ul {
+      list-style: none;
+      padding: 0;
+  
+      li {
+        font-size: 1.2rem;
+        margin: 10px 0;
+      }
+    }
+  
+    p {
+      font-size: 1rem;
+      text-align: center;
+      margin-top: 20px;
+    }
+  }
+  
+  .cta {
+    background-color: #75563C;
+    color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+  
+    h3 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+  
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+  
+    .ctaButton {
+      background-color: #EFA92F;
+      padding: 15px 30px;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: #F8E370;
+      }
+    }
+  }
+  

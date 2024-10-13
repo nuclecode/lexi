@@ -1,0 +1,195 @@
+// v2
+@import '../../styles/variables.scss';
+
+.electricalWorkPage {
+    color: #fff;
+    background-color: #75563C;
+    // padding: 2rem;
+  
+    .heroSection {
+      position: relative;
+      height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      background-color: rgba(0, 0, 0, 0.7);
+  
+      .heroImage {
+        z-index: 1;
+      }
+  
+      .heroContent {
+        z-index: 1;
+        text-align: center;
+        // color: #FFFFFF;
+        color: #4C3C2E;
+
+        h1 {
+          font-size: 6rem;
+          color: #4C3C2E;
+          animation: fadeInText 2s ease-in-out;
+        }
+        p {
+          font-size: 1.2rem;
+          color: #ADADAD;
+          animation: fadeInText 2.5s ease-in-out;
+        }
+      }
+    }
+  
+    .processSection {
+      margin-top: 2rem;
+      padding: 2rem;
+      background-color: #EFA92F;
+  
+      h2 {
+        color: #4C3C2E;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        animation: fadeInText 1s ease-in-out;
+      }
+  
+      .cardsContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 2rem;
+      }
+  
+      .card {
+        background-color: #75563C;
+        color: #FFFFFF;
+        border: 1px solid #4C3C2E;
+        padding: 1.5rem;
+        width: 100%;
+        max-width: 300px;
+        border-radius: 8px;
+        text-align: center;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  
+        &:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+  
+        strong {
+          display: block;
+          font-size: 1.5rem;
+          color: #F8E370;
+          margin-bottom: 1rem;
+        }
+  
+        p {
+          color: #ADADAD;
+        }
+      }
+  
+      // Fade-in animation for cards
+      .fadeIn {
+        opacity: 0;
+        animation: fadeIn 1.5s ease-in-out forwards;
+      }
+  
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    }
+  
+    .servicesSection {
+      margin-top: 2rem;
+      padding: 2rem;
+      background-color: #848484;
+  
+      h2 {
+        color: #FFFFFF;
+      }
+  
+      ul {
+        list-style-type: disc;
+        padding-left: 1.5rem;
+  
+        li {
+          margin-bottom: 1rem;
+          color: #FFFFFF;
+        }
+      }
+    }
+  
+    @keyframes fadeInText {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+  
+
+// v1 // src/app/electricalWork/ElectricalWork.module.scss
+
+// .electricalWorkPage {
+//     padding: 2rem;
+//     color: #fff;
+//     background-color: #75563C;
+  
+//     .heroSection {
+//       background-color: #4C3C2E;
+//       padding: 3rem;
+//       text-align: center;
+//       h1 {
+//         color: #F8E370;
+//       }
+//       p {
+//         font-size: 1.2rem;
+//         color: #ADADAD;
+//       }
+//     }
+  
+//     .processSection {
+//       margin-top: 2rem;
+//       padding: 2rem;
+//       background-color: #EFA92F;
+//       h2 {
+//         color: #4C3C2E;
+//       }
+//       .processSteps {
+//         list-style-type: decimal;
+//         padding-left: 2rem;
+//         li {
+//           margin-bottom: 1.5rem;
+//           strong {
+//             color: #75563C;
+//           }
+//         }
+//       }
+//     }
+  
+//     .servicesSection {
+//       margin-top: 2rem;
+//       padding: 2rem;
+//       background-color: #848484;
+//       h2 {
+//         color: #FFFFFF;
+//       }
+//       ul {
+//         list-style-type: disc;
+//         padding-left: 1.5rem;
+//         li {
+//           margin-bottom: 1rem;
+//           color: #FFFFFF;
+//         }
+//       }
+//     }
+//   }
+  
