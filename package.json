@@ -10,6 +10,7 @@
     "postbuild": "next-sitemap"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "embla-carousel-react": "^8.3.0",
     "framer-motion": "^11.11.1",
     "next": "14.2.14",

@@ -1,0 +1,107 @@
+//  v2
+
+// src/components/Snake.module.scss
+
+.snakeContainer {
+    position: relative;
+    width: 100%;
+    height: 300px; // Increase height to allow for the wave
+    overflow: hidden;
+  }
+  
+  .snakeLine {
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    position: absolute;
+    top: 50%; // Start in the middle
+    transform: translateY(-50%); // Center the snake line vertically
+    animation: snakeWave 15s linear infinite;
+  }
+  
+  .serviceItem {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #FFFFFF;
+    background-color: #4C3C2E;
+    margin-right: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  // Sinusoidal wave effect for twisting wire look
+  @keyframes snakeWave {
+    0% {
+      transform: translateX(100%) translateY(0);
+    }
+    10% {
+      transform: translateX(90%) translateY(-20px);
+    }
+    20% {
+      transform: translateX(80%) translateY(20px);
+    }
+    30% {
+      transform: translateX(70%) translateY(-30px);
+    }
+    40% {
+      transform: translateX(60%) translateY(30px);
+    }
+    50% {
+      transform: translateX(50%) translateY(-40px);
+    }
+    60% {
+      transform: translateX(40%) translateY(40px);
+    }
+    70% {
+      transform: translateX(30%) translateY(-30px);
+    }
+    80% {
+      transform: translateX(20%) translateY(20px);
+    }
+    90% {
+      transform: translateX(10%) translateY(-20px);
+    }
+    100% {
+      transform: translateX(-100%) translateY(0);
+    }
+  }
+  
+
+
+
+// // v1
+
+// .snakeContainer {
+//     position: relative;
+//     width: 100%;
+//     height: 200px;
+//     overflow: hidden;
+//   }
+  
+//   .snakeLine {
+//     display: flex;
+//     flex-wrap: nowrap;
+//     white-space: nowrap;
+//     position: absolute;
+//     top: 50%;
+//     animation: snakeMove 20s linear infinite;
+//   }
+  
+//   .serviceItem {
+//     padding: 10px 20px;
+//     font-size: 1.2rem;
+//     color: #FFFFFF;
+//     background-color: #4C3C2E;
+//     margin-right: 20px;
+//     border-radius: 20px;
+//   }
+  
+//   @keyframes snakeMove {
+//     0% {
+//       transform: translateX(100%);
+//     }
+//     100% {
+//       transform: translateX(-100%);
+//     }
+//   }
+  

@@ -1,0 +1,51 @@
+// src/app/full-renovation/full-renovation.module.scss
+
+.renovationContainer {
+    padding: 2rem;
+    background-color: #f5f5f5;
+  }
+  
+  .introSection {
+    text-align: center;
+    padding: 3rem 0;
+  
+    h1 {
+      font-size: 2.5rem;
+      color: #75563C;
+    }
+  
+    p {
+      font-size: 1.25rem;
+      color: #4C3C2E;
+    }
+  }
+  
+  .stepsSection {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+  
+  .step {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  
+    &:hover {
+      transform: scale(1.02);
+    }
+  
+    h2 {
+      font-size: 1.75rem;
+      color: #EFA92F;
+    }
+  
+    p {
+      font-size: 1.15rem;
+      color: #75563C;
+    }
+  }
+  
