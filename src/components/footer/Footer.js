@@ -5,6 +5,7 @@ import footerlinks from './footerlinks';
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import logo from '../../../public/Business card-LEXI_02_for PRINT-02.jpg';
 import Image from 'next/image';
+import React from "react";
 // import Head from 'next/head';
 
 
@@ -106,7 +107,12 @@ const Footer = () => {
 
           <div className={`${styles.column} ${styles.lastColumn}`}>
               <div className={styles.logo}>
-                  <Image src={logo} alt="Lexi Logo" width='auto' height={150}/>
+                  <Image
+                      src='/lexi-logot.svg'
+                      alt="Lexi Logo"
+                      width={80}
+                      height={40}
+                  />
               </div>
               <div className={styles.cta}>
                   <Link href="/contact">Contact Us</Link>

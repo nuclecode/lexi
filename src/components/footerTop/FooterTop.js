@@ -24,7 +24,7 @@ const FooterTop = () => {
       {/* Third Section: Contact and Social Links */}
       <div className="footer-top__contact">
         <div className="footer-top__email-phone">
-          <p>Email us: <a href="mailto:info@creativeenterprise.qut.com.au">info@lexi.ltd</a></p>
+          <p>Email us: <a href="mailto:olexii@lexi.ltd">olexii@lexi.ltd</a></p>
           <p>Call us:  <a href="tel:+447482051203">07482051203</a></p>
         </div>
         <div className="footer-top__social">
