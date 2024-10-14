@@ -1,58 +1,56 @@
 @import '../../../styles/variables.scss';
 
 .navbar {
-  position: fixed; // Fix the navbar at the top
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000; // Keep it above other elements
+  z-index: 1000;
   width: 100%;
-  transition: background-color 0.3s ease, backdrop-filter 0.3s ease; // Smooth transitions
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
 
   &.scrolled {
-    backdrop-filter: blur(10px); // Blur effect on scroll
-    background-color: rgba(255, 255, 255, 0.3); // Semi-transparent background
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.3);
 
-    // Styling for links and logo when scrolled
     li {
       a {
-        text-decoration: none; // Remove underline
-        color: black; // Link color
-        font-weight: bold; // Bold links
-        transition: color 0.3s ease; // Smooth color transition
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        transition: color 0.3s ease;
 
         &:hover {
-          color: #F8E370; // Change color on hover
+          color: #F8E370;
         }
       }
     }
 
     .contactInfo {
-      color: black; // Contact info color when scrolled
+      color: black;
     }
 
     .logo {
-      color: black; // Logo color when scrolled
+      color: black;
     }
   }
 }
 
 .navContent {
-  display: flex; // Flexbox for alignment
-  justify-content: space-between; // Space between logo and links
-  align-items: center; // Center vertically
-  padding: 20px; // Padding around navbar
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
 }
 
 .logo {
-  font-size: 24px; // Logo font size
-  color: white; // Initial logo color
+ z-index: 999;
 }
 
 .navLinks {
-  list-style: none; // Remove bullet points
-  display: flex; // Flexbox for horizontal alignment
-  gap: 20px; // Space between links
+  list-style: none;
+  display: flex;
+  gap: 20px;
 
   li {
     a {
@@ -70,9 +68,9 @@
 }
 
 .contactInfo {
-  display: flex; // Flexbox for alignment
-  align-items: center; // Center the icon and text vertically
-  color: white; // Initial contact info color
+  display: flex;
+  align-items: center;
+  color: white;
 
   .phoneIcon {
     margin-right: 8px;
@@ -87,22 +85,22 @@
 // Keyframes for ringing animation
 @keyframes ringing {
   0% {
-    transform: rotate(0deg) scale(1); // Initial state
+    transform: rotate(0deg);
   }
   25% {
-    transform: rotate(5deg) scale(1.1); // Tilt to the right
+    transform: rotate(20deg);
   }
   50% {
-    transform: rotate(0deg) scale(1); // Back to initial
+    transform: rotate(0deg);
   }
   75% {
-    transform: rotate(-5deg) scale(1.1); // Tilt to the left
+    transform: rotate(-20deg);
   }
   100% {
-    transform: rotate(0deg) scale(1); // Back to initial
+    transform: rotate(0deg);
   }
 }
 
 .ringing {
-  animation: ringing 1s infinite; // Apply the ringing animation
+  animation: ringing 1s infinite ease-in;
 }

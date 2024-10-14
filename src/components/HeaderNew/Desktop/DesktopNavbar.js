@@ -1,10 +1,9 @@
 'use client'
-
+import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
-import { FaPhoneVolume } from 'react-icons/fa6';
-import styles from './DesktopNavbar.module.scss';
+import { BiPhoneCall } from "react-icons/bi";import styles from './DesktopNavbar.module.scss';
 
-const DesktopNavbar = () => {
+    const DesktopNavbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(() => {
@@ -22,16 +21,20 @@ const DesktopNavbar = () => {
     return (
         <nav className={`${styles.navbar} ${isScrolled ? styles.scrolled : ''}`}>
             <div className={styles.navContent}>
-                <h1 className={styles.logo}>Logo</h1>
-                <ul className={styles.navLinks}>
-                    <li><a href="/home">Home</a></li>
+                <Image
+                    src='/lexi-logot.svg'
+                    alt="Logo"
+                    width={80}
+                    height={40}
+                />                <ul className={styles.navLinks}>
+                    <li><a href="/">Home</a></li>
                     <li><a href="/solutions">Solutions</a></li>
                     <li><a href="/about">About</a></li>
                     <li><a href="/contact">Contact</a></li>
                 </ul>
                 <div className={styles.contactInfo}>
-                    <FaPhoneVolume className={`${styles.phoneIcon} ${styles.ringing}`} />
-                    <span className={styles.phoneNumber}>+1 (234) 567-8901</span>
+                    <BiPhoneCall className={`${styles.phoneIcon} ${styles.ringing}`} />
+                    <span className={styles.phoneNumber}>07482051203</span>
                 </div>
             </div>
         </nav>

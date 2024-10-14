@@ -1,8 +1,8 @@
 import React from 'react';
-import Link from 'next/link'; // Import Link from Next.js
-import styles from './Hero.module.scss';
+import Link from 'next/link';
+import styles from './HeroOld.module.scss';
 
-const Hero = () => {
+const HeroOld = () => {
     return (
         <div className={styles.hero}>
             <video autoPlay loop muted className={styles.hero__video}>
@@ -24,7 +24,7 @@ const Hero = () => {
     );
 };
 
-export default Hero;
+export default HeroOld;
 
 
 

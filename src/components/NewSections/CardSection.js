@@ -1,11 +1,11 @@
-// app/landing/components/CardSection.js
 import styles from "./landing.module.scss";
 
 const CardSection = () => {
     const cards = [
-        { title: "Card 1", subtitle: "Subtitle 1", description: "Description for card 1" },
-        { title: "Card 2", subtitle: "Subtitle 2", description: "Description for card 2" },
-        { title: "Card 3", subtitle: "Subtitle 3", description: "Description for card 3" },
+        { title: "For Landlords", subtitle: "Landlords benefits", description: "Description" },
+        { title: "For Investors", subtitle: "Investors benefits", description: "Description" },
+        { title: "For Renovators", subtitle: "Renovators benefits", description: "Description" },
+        { title: "For Property Developers", subtitle: "Property Developers benefits", description: "Description" },
     ];
 
     return (

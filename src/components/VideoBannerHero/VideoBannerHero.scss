@@ -1,0 +1,192 @@
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  z-index: 2;
+}
+
+.hero-headline {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  padding: 20px 60px;
+}
+
+@media (max-width: 768px) {
+  .hero-headline {
+    font-size: 2.2rem;
+  }
+}
+
+/* Button Group for CTA */
+.cta-buttons, .button-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  height: auto;
+  padding: 0;
+}
+
+.boton {
+  width: 200px;
+  height: 50px;
+  margin: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.botontext {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  text-align: center;
+  line-height: 50px;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.twist {
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.twist:before, .twist:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+}
+
+.twist:before {
+  background: #75563c;
+  bottom: 100%;
+  transform: matrix3d(1, 0, 0, 0, 0, 0, -1, -0.003, 0, 1, 0, 0, 0, 0, 0, 1);
+}
+
+.twist:after {
+  background: #f8e370;
+  top: 100%;
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.003, 0, -50, 0, 1);
+}
+
+.boton:hover .twist:before {
+  background: #75563c;
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0.003, 0, 50, 0, 1);
+}
+
+.boton:hover .twist:after {
+  background: #dedae1;
+  transform: matrix3d(1, 0, 0, 0, 0, 0, -1, 0.003, 0, 1, 0, 0, 0, 0, 0, 1);
+}
+
+/* Timing for Twist Animation */
+.boton .twist:nth-of-type(1):before, .boton .twist:nth-of-type(1):after {
+  transition-delay: 0s;
+}
+
+.boton .twist:nth-of-type(2):before, .boton .twist:nth-of-type(2):after {
+  transition-delay: 0.1s;
+}
+
+.boton .twist:nth-of-type(3):before, .boton .twist:nth-of-type(3):after {
+  transition-delay: 0.2s;
+}
+
+.boton .twist:nth-of-type(4):before, .boton .twist:nth-of-type(4):after {
+  transition-delay: 0.3s;
+}
+
+/* Button Text Animation */
+.botontext:nth-of-type(1) {
+  color: #FFD700;
+  bottom: 100%;
+  transform: matrix3d(1, 0, 0, 0, 0, 0, -1, -0.003, 0, 1, 0, 0, 0, 0, 0, 1);
+}
+
+.boton:hover .botontext:nth-of-type(1) {
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0.003, 0, 50, 0, 1);
+}
+
+.botontext:nth-of-type(2) {
+  color: #4c3c2e;
+  top: 100%;
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, -0.003, 0, -50, 0, 1);
+}
+
+.boton:hover .botontext:nth-of-type(2) {
+  transform: matrix3d(1, 0, 0, 0, 0, 0, -1, 0.003, 0, 1, 0, 0, 0, 0, 0, 1);
+}
+
+/* Burger Menu */
+.square {
+  border: 1px solid #9f7f5e;
+  height: 26px;
+  width: 26px;
+  display: block;
+  margin: 40px auto;
+  transform: rotate(45deg);
+  overflow: hidden;
+  transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+}
+
+.square .burgerwrap {
+  height: 18px;
+  width: 21px;
+  transform: rotate(-45deg);
+  padding-left: 5px;
+  padding-top: 8px;
+  transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+}
+
+.square:hover {
+  transform: rotate(135deg);
+  border: 1px solid #fff;
+}
+
+.square:hover .burgerwrap {
+  transform: rotate(-135deg);
+}
+
+.square span {
+  height: 2px;
+  width: 14px;
+  background: #9f7f5e;
+  display: block;
+  margin-bottom: 2px;
+  transition: all 500ms cubic-bezier(0.970, 0.000, 0.395, 0.995);
+}
