@@ -2,7 +2,7 @@ import './globals.css';
 import styles from './layout.module.scss';
 import Link from 'next/link';
 import Head from 'next/head';
-
+import Script from 'next/script';
 import localFont from "next/font/local";
 import "../styles/globals.scss";
 
@@ -32,18 +32,6 @@ export default function RootLayout({ children }) {
       <title>LEXI Construction Services</title>
       
       <Link rel="icon" href="/favicon.ico" sizes="any" />
-
-      <script
-      dangerouslySetInnerHTML={{
-        __html:`
-            (function() {
-              var tidioScript = document.createElement("script");
-              tidioScript.src = "https://code.tidio.co/pw6cgje8ywzwekn7ougvgkukgbeiponl.js";
-              tidioScript.async = true;
-              document.head.appendChild(tidioScript);
-            })();`,
-      }}
-      />
     </Head>
     <body className={`${geistSans.variable} ${geistMono.variable}`}>
 
@@ -78,6 +66,10 @@ export default function RootLayout({ children }) {
         Engineered by nuclecode
       </a></p>
     </footer> */}
+      <Script
+          src="//code.tidio.co/pw6cgje8ywzwekn7ougvgkukgbeiponl.js"
+          strategy="lazyOnload"
+      />
     </body>
     </html>
   );
