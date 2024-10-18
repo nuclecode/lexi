@@ -1,5 +1,4 @@
 import React from "react";
-import Hero from "../components/hero/Hero"
 import Head from 'next/head';
 import { metadata } from '../utils/metadata';
 import TextImageSection from "../components/NewSections/TextImageSection";
@@ -10,7 +9,7 @@ import TestimonialsSection from "../components/NewSections/TestimonialsSection";
 import PartnerUsSection from "../components/NewSections/PartnerUsSection";
 import GetInTouchForm from "../components/NewSections/GetInTouchForm";
 import styles from "../components/NewSections/landing.module.scss";
-
+import Hero from "../components/VideoBannerHero/VideoBannerHero";
 const HomePage = () => {
   return (
     <>
@@ -22,7 +21,8 @@ const HomePage = () => {
       </Head>
 
       <div className={styles.landingPage}>
-        <Hero/>
+        {/*<HeroOld/>*/}
+        <Hero />
         <TextImageSection/>
         <CardSection/>
         <SnappingScrollSection/>
