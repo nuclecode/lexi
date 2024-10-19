@@ -1,8 +1,7 @@
-
-import AboutDescription from "@/components/aboutDescription/AboutDescription";
-import ChooseUs from "@/components/chooseUs/ChooseUs";
-import styles from './Contact.scss';
-import ContactAbout from '../../components/ContactAbout/ContactAbout';
+// import AboutDescription from "@/components/aboutDescription/AboutDescription";
+// import ChooseUs from "@/components/chooseUs/ChooseUs";
+import './Contact.scss';
+// import ContactAbout from '../../components/ContactAbout/ContactAbout';
 //
 // export const metadata = {
 //   title: "LEXI Construction Services - About Us",
@@ -12,12 +11,36 @@ import ContactAbout from '../../components/ContactAbout/ContactAbout';
 export default function About() {
   return (
       <>
-        <section className="contact-hero">
+        <section className="contact-hero-section">
           <div className="hero-background">
             <h1>Contact Us</h1>
           </div>
         </section>
-        <ContactAbout />
+
+      <section className="contact-section-page">
+          <div className="contact-info">
+          <h2>Looking to start a new project or to partner?</h2>
+          <p> Drop us a message and we will contact you.</p>
+          <h3>Call us</h3>
+          <p>+44(0)7482051203</p>
+          <h3>Email us</h3>
+          <p>olexii@lexi.ltd</p>
+          </div>
+          <div className="contact-form">
+          <form>
+          <input type="text" placeholder="Your name"/>
+          <input type="email" placeholder="Your email"/>
+          <input type="text" placeholder="Subject"/>
+          <textarea placeholder="Message"></textarea>
+          <div className="checkbox-container">
+          <input type="checkbox" id="partner"/>
+          <label htmlFor="partner">I am looking for a partnership</label>
+          </div>
+
+          <button type="submit">Submit</button>
+          </form>
+          </div>
+      </section>
       </>
   );
 }

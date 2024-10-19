@@ -1,4 +1,4 @@
-.contact-hero {
+.contact-hero-section {
   height: 40vh;
   position: relative;
 
@@ -18,6 +18,99 @@
   }
 }
 
+.contact-section-page {
+  display: flex;
+  padding: 50px;
+  background-color: transparent;
+
+  .contact-info {
+    flex: 1;
+    margin-right: 50px;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #75563c;
+    }
+
+    h3 {
+      margin-top: 30px;
+      margin-bottom: 10px;
+      color: #d39350;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #75563c;
+    }
+
+    .contact-info p:nth-of-type(2) {
+      margin-bottom: 20px;
+    }
+
+    .contact-info p:nth-of-type(4) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .contact-form {
+    flex: 1;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        background-color: transparent;
+        border-bottom: 2px solid #75563c;
+        border-radius: 0;
+        outline: none;
+        color: #75563c;
+
+        &:focus {
+          border-bottom: 2px solid #ff861f;
+        }
+
+        &::placeholder {
+          color: rgba(117, 86, 60, 0.78);
+        }
+      }
+
+      .checkbox-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        input[type="checkbox"] {
+          width: auto;
+        }
+
+        label {
+          color: #75563c;
+        }
+      }
+
+      button {
+        padding: 15px;
+        background-color: #ff861f;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+
+        &:hover {
+          background-color: #d56e1a;
+        }
+      }
+    }
+  }
+}
 
 
 // $white: #FFFFFF;
@@ -154,230 +247,229 @@
 
 
 
-
-$white: #FFFFFF;
-$light-yellow: #F8E370;
-$dark-yellow: #efa92f;
-$light-brown: #75563C;
-$dark-brown: #4C3C2E;
-$light-grey: #ADADAD;
-$dark-grey: #848484;
-
-.contactContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  // padding: 2rem;
-  justify-content: center;
-
-  .heroImage {
-    position: relative;
-    width: 100%;
-    height: 60vh;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: $white;
-    background-color: $light-brown;
-
-    img {
-      object-fit: cover;
-    }
-
-    .heroText {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      color: $white;
-      background-color: rgba($dark-brown, 0.7); // Прозрачный фон для текста
-      padding: 20px;
-      border-radius: 10px;
-      z-index: 2;
-
-      h1 {
-        font-size: 2.5rem;
-        // margin-bottom: 10px;
-        margin-bottom: 1rem;
-        color: $light-yellow;
-      }
-
-      p {
-        font-size: 1.2rem;
-        max-width: 600px;
-        line-height: 1.5;
-        color: $white;
-      }
-    }
-  }
-
-  .formSection {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 20px;
-    background-image: url('/images/IMG_2450.PNG');
-    background-size: cover;
-    background-position: center;
-    // gap: 2rem;
-    // margin-top: 2rem;
-
-    @media(min-width: 768px) {
-      flex-direction: row;
-      justify-content: space-between;
-      padding: 40px;
-    }
-
-    .partnerForm, .clientForm {
-      background-color: rgba($white, 0.8); // Прозрачность для фона форм
-      padding: 20px;
-      margin: 10px;
-      border-bottom: 3px solid $light-yellow;
-      width: 100%;
-      max-width: 600px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      min-height: 600px; // Устанавливаем фиксированную высоту для обеих форм
-
-      // flex: 1;
-      // padding: 2rem;
-      // border: 1px solid $light-grey;
-      // background-color: $white;
-      // position: relative;
-      // display: flex;
-      // flex-direction: column;
-
-      @media(min-width: 768px) {
-        width: 45%;
-      }
-
-      h2 {
-        color: $dark-brown;
-        // margin-bottom: 20px;
-        margin-bottom: 1rem;
-      }
-
-      p {
-        color: $dark-grey;
-        margin-bottom: 1.5rem;
-      }
-
-      form {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 100%;
-
-        input, textarea {
-          background: none;
-          border: none;
-          border-bottom: 2px solid $light-grey;
-          margin-bottom: 20px;
-          padding: 10px;
-          font-size: 16px;
-          transition: border-color 0.3s ease, transform 0.3s ease; // Добавляем анимацию
-          transform: translateY(0);
-          
-          &:focus {
-            border-bottom: 2px solid $dark-yellow;
-            outline: none;
-            transform: translateY(-3px); // Легкая анимация при фокусе
-          }
-        }
-
-        // input, textarea {
-        //   padding: 0.5rem;
-        //   border: none;
-        //   border-bottom: 2px solid $light-brown;
-        //   background-color: transparent;
-        //   margin-bottom: 1.5rem;
-        //   font-size: 1rem;
-        //   outline: none;
-        //   transition: border-color 0.3s ease;
-
-        //   &:focus {
-        //     border-color: $dark-brown;
-        //   }
-        // }
-
-        textarea {
-          resize: none;
-          height: 100px;
-        }
-
-        .phoneWrapper {
-          display: flex;
-          gap: 1rem;
-          flex-direction: column;
-
-          .countryCode {
-            width: 80px;
-            padding: 0.5rem;
-            border: none;
-            border-bottom: 2px solid $light-brown;
-            background-color: transparent;
-            outline: none;
-            font-size: 1rem;
-          }
-
-          .phoneNumber {
-            flex-grow: 1;
-            padding: 0.5rem;
-            border: none;
-            border-bottom: 2px solid $light-brown;
-            background-color: transparent;
-            outline: none;
-            font-size: 1rem;
-          }
-        }
-
-        button {
-          background-color: $dark-brown;
-          color: $white;
-          padding: 10px 20px;
-          border: none;
-          cursor: pointer;
-          transition: background-color 0.3s ease, transform 0.3s ease; // Анимация для кнопки
-
-          &:hover {
-            background-color: $light-brown;
-            transform: scale(1.05); // Легкое увеличение кнопки при наведении
-          }
-        }
-
-        // button {
-        //   padding: 0.75rem 1.5rem;
-        //   background-color: $light-brown;
-        //   color: $white;
-        //   border: none;
-        //   font-size: 1rem;
-        //   cursor: pointer;
-        //   transition: background-color 0.3s ease;
-
-        //   &:hover {
-        //     background-color: $dark-brown;
-        //   }
-        // }
-      }
-    }
-
-    .clientForm {
-      border-left: none;
-
-      @media(min-width: 768px) {
-        border-left: 1px solid $light-grey;
-      }
-    }
-  }
-}
-
-
-
+//
+//$white: #FFFFFF;
+//$light-yellow: #F8E370;
+//$dark-yellow: #efa92f;
+//$light-brown: #75563C;
+//$dark-brown: #4C3C2E;
+//$light-grey: #ADADAD;
+//$dark-grey: #848484;
+//
+//.contactContainer {
+//  display: flex;
+//  flex-direction: column;
+//  align-items: center;
+//  // padding: 2rem;
+//  justify-content: center;
+//
+//  .heroImage {
+//    position: relative;
+//    width: 100%;
+//    height: 60vh;
+//    overflow: hidden;
+//    display: flex;
+//    align-items: center;
+//    justify-content: center;
+//    color: $white;
+//    background-color: $light-brown;
+//
+//    img {
+//      object-fit: cover;
+//    }
+//
+//    .heroText {
+//      position: absolute;
+//      top: 50%;
+//      left: 50%;
+//      transform: translate(-50%, -50%);
+//      text-align: center;
+//      color: $white;
+//      background-color: rgba($dark-brown, 0.7); // Прозрачный фон для текста
+//      padding: 20px;
+//      border-radius: 10px;
+//      z-index: 2;
+//
+//      h1 {
+//        font-size: 2.5rem;
+//        // margin-bottom: 10px;
+//        margin-bottom: 1rem;
+//        color: $light-yellow;
+//      }
+//
+//      p {
+//        font-size: 1.2rem;
+//        max-width: 600px;
+//        line-height: 1.5;
+//        color: $white;
+//      }
+//    }
+//  }
+//
+//  .formSection {
+//    display: flex;
+//    flex-direction: column;
+//    align-items: center;
+//    justify-content: center;
+//    width: 100%;
+//    padding: 20px;
+//    background-size: cover;
+//    background-position: center;
+//    // gap: 2rem;
+//    // margin-top: 2rem;
+//
+//    @media(min-width: 768px) {
+//      flex-direction: row;
+//      justify-content: space-between;
+//      padding: 40px;
+//    }
+//
+//    .partnerForm, .clientForm {
+//      background-color: rgba($white, 0.8);
+//      padding: 20px;
+//      margin: 10px;
+//      border-bottom: 3px solid $light-yellow;
+//      width: 100%;
+//      max-width: 600px;
+//      display: flex;
+//      flex-direction: column;
+//      justify-content: space-between;
+//      min-height: 600px; // Устанавливаем фиксированную высоту для обеих форм
+//
+//      // flex: 1;
+//      // padding: 2rem;
+//      // border: 1px solid $light-grey;
+//      // background-color: $white;
+//      // position: relative;
+//      // display: flex;
+//      // flex-direction: column;
+//
+//      @media(min-width: 768px) {
+//        width: 45%;
+//      }
+//
+//      h2 {
+//        color: $dark-brown;
+//        // margin-bottom: 20px;
+//        margin-bottom: 1rem;
+//      }
+//
+//      p {
+//        color: $dark-grey;
+//        margin-bottom: 1.5rem;
+//      }
+//
+//      form {
+//        display: flex;
+//        flex-direction: column;
+//        justify-content: space-between;
+//        height: 100%;
+//
+//        input, textarea {
+//          background: none;
+//          border: none;
+//          border-bottom: 2px solid $light-grey;
+//          margin-bottom: 20px;
+//          padding: 10px;
+//          font-size: 16px;
+//          transition: border-color 0.3s ease, transform 0.3s ease; // Добавляем анимацию
+//          transform: translateY(0);
+//
+//          &:focus {
+//            border-bottom: 2px solid $dark-yellow;
+//            outline: none;
+//            transform: translateY(-3px); // Легкая анимация при фокусе
+//          }
+//        }
+//
+//        // input, textarea {
+//        //   padding: 0.5rem;
+//        //   border: none;
+//        //   border-bottom: 2px solid $light-brown;
+//        //   background-color: transparent;
+//        //   margin-bottom: 1.5rem;
+//        //   font-size: 1rem;
+//        //   outline: none;
+//        //   transition: border-color 0.3s ease;
+//
+//        //   &:focus {
+//        //     border-color: $dark-brown;
+//        //   }
+//        // }
+//
+//        textarea {
+//          resize: none;
+//          height: 100px;
+//        }
+//
+//        .phoneWrapper {
+//          display: flex;
+//          gap: 1rem;
+//          flex-direction: column;
+//
+//          .countryCode {
+//            width: 80px;
+//            padding: 0.5rem;
+//            border: none;
+//            border-bottom: 2px solid $light-brown;
+//            background-color: transparent;
+//            outline: none;
+//            font-size: 1rem;
+//          }
+//
+//          .phoneNumber {
+//            flex-grow: 1;
+//            padding: 0.5rem;
+//            border: none;
+//            border-bottom: 2px solid $light-brown;
+//            background-color: transparent;
+//            outline: none;
+//            font-size: 1rem;
+//          }
+//        }
+//
+//        button {
+//          background-color: $dark-brown;
+//          color: $white;
+//          padding: 10px 20px;
+//          border: none;
+//          cursor: pointer;
+//          transition: background-color 0.3s ease, transform 0.3s ease; // Анимация для кнопки
+//
+//          &:hover {
+//            background-color: $light-brown;
+//            transform: scale(1.05); // Легкое увеличение кнопки при наведении
+//          }
+//        }
+//
+//        // button {
+//        //   padding: 0.75rem 1.5rem;
+//        //   background-color: $light-brown;
+//        //   color: $white;
+//        //   border: none;
+//        //   font-size: 1rem;
+//        //   cursor: pointer;
+//        //   transition: background-color 0.3s ease;
+//
+//        //   &:hover {
+//        //     background-color: $dark-brown;
+//        //   }
+//        // }
+//      }
+//    }
+//
+//    .clientForm {
+//      border-left: none;
+//
+//      @media(min-width: 768px) {
+//        border-left: 1px solid $light-grey;
+//      }
+//    }
+//  }
+//}
+//
+//
+//
 
 // // // $white: #FFFFFF;
 // // // $light-yellow: #F8E370;
