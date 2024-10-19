@@ -1,3 +1,25 @@
+.contact-hero {
+  height: 40vh;
+  position: relative;
+
+  .hero-background {
+    background-image: url('/AdobeStock_851024021_Preview.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 4rem;
+    color: #fff;
+  }
+}
+
+
+
 // $white: #FFFFFF;
 // $light-yellow: #F8E370;
 // $dark-yellow: #efa92f;
