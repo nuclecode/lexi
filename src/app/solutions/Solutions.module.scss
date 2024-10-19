@@ -1,22 +1,126 @@
-.solutions {
+.contact-page {
+  position: relative;
+  text-align: center;
+
+  .contact-hero {
+    height: 40vh;
     position: relative;
-    padding: 2rem;
-    text-align: center;
-  
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 2rem;
-      color: #333;
-    }
-  
-    .cardGrid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 1rem;
-      padding: 0 2rem;
-  
-      @media (max-width: 600px) {
-        grid-template-columns: 1fr;
+
+    .hero-background {
+      background-image: url('/AdobeStock_819432171_Preview.jpeg'); // Adjust the image path as necessary
+      background-size: cover;
+      background-position: center;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      h1 {
+        font-size: 4rem;
+        color: #fff;
+
+        @media (max-width: 768px) {
+          font-size: 2.5rem;
+        }
       }
     }
   }
+
+  .contact-info {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #333;
+
+      @media (max-width: 768px) {
+        font-size: 2rem;
+      }
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #75563c;
+      margin-bottom: 0.5rem;
+      text-align: left;
+      max-width: 600px;
+
+      @media (max-width: 768px) {
+        font-size: 1rem;
+        padding: 0 1rem;
+      }
+    }
+
+    .contact-form {
+      width: 100%;
+      max-width: 600px;
+      margin-top: 2rem;
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        input,
+        textarea {
+          width: 100%;
+          padding: 10px;
+          border: none;
+          border-bottom: 2px solid #75563c;
+          outline: none;
+          background-color: transparent;
+          color: #75563c;
+
+          &:focus {
+            border-bottom: 2px solid #ff861f;
+          }
+
+          &::placeholder {
+            color: rgba(117, 86, 60, 0.78);
+          }
+        }
+
+        button {
+          padding: 15px;
+          background-color: #ff861f;
+          color: #fff;
+          border: none;
+          cursor: pointer;
+          border-radius: 5px;
+
+          &:hover {
+            background-color: #d56e1a;
+          }
+        }
+      }
+    }
+  }
+}
+
+//.solutions {
+//    position: relative;
+//    padding: 2rem;
+//    text-align: center;
+//
+//    h1 {
+//      font-size: 2.5rem;
+//      margin-bottom: 2rem;
+//      color: #333;
+//    }
+//
+//    .cardGrid {
+//      display: grid;
+//      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+//      gap: 1rem;
+//      padding: 0 2rem;
+//
+//      @media (max-width: 600px) {
+//        grid-template-columns: 1fr;
+//      }
+//    }
+//  }
