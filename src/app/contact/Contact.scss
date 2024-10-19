@@ -10,11 +10,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center; // Center text for better mobile experience
   }
 
   h1 {
     font-size: 4rem;
     color: #fff;
+
+    // Responsive font size
+    @media (max-width: 768px) {
+      font-size: 2.5rem; // Smaller font size for mobile
+    }
   }
 }
 
@@ -22,6 +28,13 @@
   display: flex;
   padding: 50px;
   background-color: transparent;
+  flex-direction: row; // Default to row for larger screens
+
+  // Responsive flex direction
+  @media (max-width: 768px) {
+    flex-direction: column; // Stack elements on mobile
+    padding: 20px; // Reduced padding for mobile
+  }
 
   .contact-info {
     flex: 1;
@@ -31,24 +44,36 @@
       font-size: 2rem;
       margin-bottom: 20px;
       color: #75563c;
+
+      // Responsive font size
+      @media (max-width: 768px) {
+        font-size: 1.5rem; // Smaller font size for mobile
+      }
     }
 
     h3 {
       margin-top: 30px;
       margin-bottom: 10px;
       color: #d39350;
+
+      // Responsive font size
+      @media (max-width: 768px) {
+        font-size: 1.25rem; // Smaller font size for mobile
+      }
     }
 
     p {
       font-size: 1.2rem;
       margin-bottom: 10px;
       color: #75563c;
+
+      // Responsive font size
+      @media (max-width: 768px) {
+        font-size: 1rem; // Smaller font size for mobile
+      }
     }
 
-    .contact-info p:nth-of-type(2) {
-      margin-bottom: 20px;
-    }
-
+    .contact-info p:nth-of-type(2),
     .contact-info p:nth-of-type(4) {
       margin-bottom: 20px;
     }
