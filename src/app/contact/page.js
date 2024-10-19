@@ -3,11 +3,11 @@ import AboutDescription from "@/components/aboutDescription/AboutDescription";
 import ChooseUs from "@/components/chooseUs/ChooseUs";
 import styles from './Contact.scss';
 import ContactAbout from '../../components/ContactAbout/ContactAbout';
-
-export const metadata = {
-  title: "LEXI Construction Services - About Us",
-  description: "Learn about our company's mission, values, and team. Discover why we're the leading provider of Home, office, apartment renovation services",
-};
+//
+// export const metadata = {
+//   title: "LEXI Construction Services - About Us",
+//   description: "Learn about our company's mission, values, and team. Discover why we're the leading provider of Home, office, apartment renovation services",
+// };
 
 export default function About() {
   return (
@@ -19,17 +19,6 @@ export default function About() {
         </section>
         <ContactAbout />
       </>
-      // <div className={styles.hero}>
-      //     <div className={styles.image} />
-      //     <div className={styles.overlay}>
-      //         <h1 className={styles.header}>About Us</h1>
-      //         <p className={styles.description}>
-      //             We are a dedicated renovations company committed to quality and customer satisfaction.
-      //         </p>
-      //         <AboutDescription />
-      //         <ChooseUs />
-      //     </div>
-      // </div>
   );
 }
 
@@ -149,3 +138,14 @@ export default function About() {
 //     </>
 //   );
 // }
+// <div className={styles.hero}>
+//     <div className={styles.image} />
+//     <div className={styles.overlay}>
+//         <h1 className={styles.header}>About Us</h1>
+//         <p className={styles.description}>
+//             We are a dedicated renovations company committed to quality and customer satisfaction.
+//         </p>
+//         <AboutDescription />
+//         <ChooseUs />
+//     </div>
+// </div>
