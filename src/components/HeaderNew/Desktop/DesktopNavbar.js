@@ -34,11 +34,12 @@ import { BiPhoneCall } from "react-icons/bi";import styles from './DesktopNavbar
                 </ul>
                 <div className={styles.contactInfo}>
                     <BiPhoneCall className={`${styles.phoneIcon} ${styles.ringing}`} />
-                    <span className={styles.phoneNumber}>07482051203</span>
-                </div>
+                    <a href="tel:07482051203" className={styles.phoneNumber}>
+                        07482051203
+                    </a></div>
             </div>
         </nav>
     );
-};
+    };
 
 export default DesktopNavbar;
