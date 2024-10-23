@@ -25,7 +25,7 @@ export default function HeroSection() {
                         <Button3D text="Partner with us" />
                     </Link>
 
-                    <Link href="/quote">
+                    <Link href="/get-a-quote">
                         <Button3D text="Get a Quote" />
                     </Link>
                 </div>
