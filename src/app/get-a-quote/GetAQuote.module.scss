@@ -1,0 +1,162 @@
+@import '../../styles/variables.scss';
+
+.contact-hero-section {
+  height: 40vh;
+  position: relative;
+
+  .hero-background {
+    background-image: url('/AdobeStock_851024021_Preview.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    h1 {
+      font-size: 4rem;
+      color: #fff;
+
+      @media (max-width: 768px) {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
+
+.contact-section-page {
+  display: flex;
+  padding: 50px;
+  background-color: transparent;
+  flex-direction: row;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .contact-info {
+    flex: 1;
+    margin-right: 50px;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #75563c;
+
+      @media (max-width: 768px) {
+        font-size: 1.5rem;
+      }
+    }
+
+    h3 {
+      margin-top: 30px;
+      margin-bottom: 10px;
+      color: #d39350;
+
+      @media (max-width: 768px) {
+        font-size: 1.25rem;
+      }
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #75563c;
+
+      @media (max-width: 768px) {
+        font-size: 1rem;
+      }
+    }
+
+    p:nth-of-type(2),
+    p:nth-of-type(4) {
+      margin-bottom: 20px;
+    }
+
+    .success {
+      margin-top: 20px;
+      color: green;
+      font-weight: bold;
+    }
+  }
+
+  .contact-form {
+    flex: 1;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        background-color: transparent;
+        border-bottom: 2px solid #75563c;
+        border-radius: 0;
+        outline: none;
+        color: #75563c;
+
+        &:focus {
+          border-bottom: 2px solid #ff861f;
+        }
+
+        &::placeholder {
+          color: rgba(117, 86, 60, 0.78);
+        }
+      }
+
+      .checkbox-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        input[type="checkbox"] {
+          width: auto;
+        }
+
+        label {
+          color: #75563c;
+        }
+      }
+
+      select {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        background-color: transparent;
+        border-bottom: 2px solid #75563c;
+        color: #75563c;
+        cursor: pointer;
+
+        &:focus {
+          border-bottom: 2px solid #ff861f;
+        }
+      }
+
+      button {
+        padding: 15px;
+        border: none;
+        background-color: #ff861f;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #e07d00;
+        }
+      }
+    }
+
+    .error {
+      color: red;
+      font-size: 0.9rem;
+      margin-top: -10px;
+      margin-bottom: 10px;
+    }
+  }
+}
