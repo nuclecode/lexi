@@ -1,0 +1,112 @@
+.contact-section-page {
+  display: flex;
+  padding: 50px;
+  background-color: transparent;
+  flex-direction: row; // Default to row for larger screens
+
+  @media (max-width: 768px) {
+    flex-direction: column; // Stack elements on mobile
+    padding: 20px; // Reduced padding for mobile
+  }
+
+  .contact-info {
+    flex: 1;
+    margin-right: 50px;
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #75563c;
+
+      // Responsive font size
+      @media (max-width: 768px) {
+        font-size: 1.5rem; // Smaller font size for mobile
+      }
+    }
+
+    h3 {
+      margin-top: 30px;
+      margin-bottom: 10px;
+      color: #d39350;
+
+      // Responsive font size
+      @media (max-width: 768px) {
+        font-size: 1.25rem; // Smaller font size for mobile
+      }
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #75563c;
+
+      // Responsive font size
+      @media (max-width: 768px) {
+        font-size: 1rem; // Smaller font size for mobile
+      }
+    }
+
+    .contact-info p:nth-of-type(2),
+    .contact-info p:nth-of-type(4) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .contact-form {
+    flex: 1;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        background-color: transparent;
+        border-bottom: 2px solid #75563c;
+        border-radius: 0;
+        outline: none;
+        color: #75563c;
+
+        &:focus {
+          border-bottom: 2px solid #ff861f;
+        }
+
+        &::placeholder {
+          color: rgba(117, 86, 60, 0.78);
+        }
+      }
+
+      .checkbox-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        input[type="checkbox"] {
+          width: auto;
+        }
+
+        label {
+          color: #75563c;
+        }
+      }
+
+      button {
+        padding: 15px;
+        background-color: #ff861f;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+
+        &:hover {
+          background-color: #d56e1a;
+        }
+      }
+    }
+  }
+}
+
