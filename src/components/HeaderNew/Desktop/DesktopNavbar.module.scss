@@ -85,25 +85,28 @@
   }
 }
 
-// Keyframes for ringing animation
+// Keyframes for a circular vibrating animation
 @keyframes ringing {
   0% {
-    transform: rotate(0deg);
+    transform: scale(1) rotate(0);
   }
-  25% {
-    transform: rotate(20deg);
+  20% {
+    transform: scale(1.1) rotate(-5deg);
   }
-  50% {
-    transform: rotate(0deg);
+  40% {
+    transform: scale(1.1) rotate(5deg);
   }
-  75% {
-    transform: rotate(-20deg);
+  60% {
+    transform: scale(1.1) rotate(-5deg);
+  }
+  80% {
+    transform: scale(1.1) rotate(5deg);
   }
   100% {
-    transform: rotate(0deg);
+    transform: scale(1) rotate(0);
   }
 }
 
 .ringing {
-  animation: ringing 1s infinite ease-in;
+  animation: ringing 1.5s ease-in-out infinite;
 }
